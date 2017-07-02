@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PanelComponent } from './panel/panel.component';
 import { MyDatePickerModule } from 'mydatepicker';
+import { RecordsService } from './records.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { MyDatePickerModule } from 'mydatepicker';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [RecordsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

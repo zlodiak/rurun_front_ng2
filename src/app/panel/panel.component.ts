@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {IMyDpOptions} from 'mydatepicker';
+
+import { IMyDpOptions } from 'mydatepicker';
+import { RecordsService } from '../records.service';
 
 @Component({
   selector: 'app-panel',
@@ -7,6 +9,11 @@ import {IMyDpOptions} from 'mydatepicker';
   styleUrls: ['./panel.component.css']
 })
 export class PanelComponent implements OnInit {
+
+  constructor(private recordsService: RecordsService) { }
+
+  ngOnInit() {
+  }  
 
   private myDatePickerOptions: IMyDpOptions = {
       // other options...
@@ -18,14 +25,12 @@ export class PanelComponent implements OnInit {
   private modelDateEnd: Object = { date: { year: 2018, month: 10, day: 19 } };  */
   private modelDateBegin: Object;  
   private modelDateEnd: Object;  
-
-	constructor() { }
-
-	ngOnInit() {
-	}
+  private records: String;  
 
   displayStatistic() {
     console.log(JSON.stringify(this.modelDateBegin['epoc']), JSON.stringify(this.modelDateBegin['epoc']));
+    this.records = this.recordsService.getRecords();
+    console.log(this.records);
   }
 
 }
