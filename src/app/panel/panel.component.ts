@@ -27,7 +27,7 @@ export class PanelComponent implements OnInit {
 
   displayStatistic() {
     this.recordsService
-        .getRecords(this.modelDateBegin['epoc'], this.modelDateBegin['epoc'])
+        .getRecords(this.modelDateBegin['epoc'], this.modelDateEnd['epoc'])
         .subscribe(data => this.records = data.json());
   }
 
