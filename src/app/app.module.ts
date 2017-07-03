@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 import { PanelComponent } from './panel/panel.component';
 import { MyDatePickerModule } from 'mydatepicker';
 import { RecordsService } from './records.service';
+import { EllipsisPipe } from './ellipsis.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PanelComponent
+    PanelComponent,
+    EllipsisPipe
   ],
   imports: [
     MyDatePickerModule,

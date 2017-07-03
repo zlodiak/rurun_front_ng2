@@ -16,7 +16,6 @@ export class PanelComponent implements OnInit {
   }  
 
   private myDatePickerOptions: IMyDpOptions = {
-      // other options...
       dateFormat: 'dd.mm.yyyy',
   };
 
@@ -28,7 +27,10 @@ export class PanelComponent implements OnInit {
   displayStatistic() {
     this.recordsService
         .getRecords(this.modelDateBegin['epoc'], this.modelDateEnd['epoc'])
-        .subscribe(data => this.records = data.json());
+        .subscribe(data => {
+          this.records = JSON.parse(data.json());
+          console.log(typeof this.records, this.records);
+        });
   }
 
 }
