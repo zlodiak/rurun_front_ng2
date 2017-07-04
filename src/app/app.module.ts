@@ -10,13 +10,19 @@ import { MyDatePickerModule } from 'mydatepicker';
 import { RecordsService } from './records.service';
 import { EllipsisPipe } from './ellipsis.pipe';
 import { RenderComponent } from './render/render.component';
+import { HomeComponent } from './home/home.component';
+import { BooksComponent } from './books/books.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PanelComponent,
     EllipsisPipe,
-    RenderComponent
+    RenderComponent,
+    HomeComponent,
+    BooksComponent,
+    NotFoundComponent
   ],
   imports: [
     MyDatePickerModule,

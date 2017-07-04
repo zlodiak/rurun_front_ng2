@@ -1,7 +1,12 @@
 <h1>
 	{{title}}
 </h1>
+<div class="nav">
+	<a [routerLink]="['/home']">home</a>
+	<a [routerLink]="['/panel']">panel</a>
+	<a [routerLink]="['/books']">books</a>
+</div>
+
 <router-outlet></router-outlet>
 
-<app-panel></app-panel>
 
