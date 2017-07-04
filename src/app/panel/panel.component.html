@@ -15,25 +15,6 @@
 </div>
 
 <div class="statistic-area">
-	<table class="statistic-table" botder="1" celpadding="8">
-	  <thead>
-	    <tr>
-	      <td>Дата</td>
-	      <td>Время тренировки</td>
-	      <td>Сердний пульс</td>
-	      <td>Максимальный пульс</td>
-	      <td>Примечания</td>
-	    </tr>
-	  </thead>
-	  <tbody>
-	    <tr id="tableBody" *ngFor="let record of records; let i = index">
-	    	<td>{{ record.fields.created_date | date:"dd-MM-yyyy" }}</td>
-	    	<td>{{ record.fields.training_time_min }}</td>
-	    	<td>{{ record.fields.pulse_avg_bpm }}</td>
-	    	<td>{{ record.fields.pulse_max_bpm }}</td>
-	    	<td>{{ record.fields.desc | ellipsis:20 }}</td>
-	    </tr>
-	  </tbody>
-	</table>
+	<app-render [renderData]="records"></app-render>
 </div>
 
