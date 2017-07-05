@@ -28,6 +28,14 @@ export class PanelComponent implements OnInit {
     'pulse_max_bpm': undefined,
     'training_time_min': undefined
   }; 
+  private limits: Object = {
+    'pulse_avg_bpm_upper': 0,
+    'pulse_avg_bpm_lower': 0,
+    'pulse_max_bpm_upper': 0,
+    'pulse_max_bpm_lower': 0,
+    'training_time_min_upper': 0,
+    'training_time_min_lower': 0
+  };   
 
   displayStatistic() {
     this.recordsService
@@ -41,5 +49,11 @@ export class PanelComponent implements OnInit {
   toggleSlideVisibility(index) {
     this.slides[index] = !this.slides[index];
   }
+
+  stopPropagator(ev) {
+    ev.stopPropagation();
+  };
+
+
 
 }

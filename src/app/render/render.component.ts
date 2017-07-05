@@ -13,5 +13,6 @@ export class RenderComponent implements OnInit {
   }
 
   @Input() renderData: Object;
+  @Input() limitsData: Object;
 
 }
