@@ -1,17 +1,48 @@
 <div class="action-area">
-	<p>
-		Date begin: 
-		<my-date-picker name="mydate" [options]="myDatePickerOptions" [(ngModel)]="modelDateBegin" required></my-date-picker>
-	</p>
+	<div class="actions dates-area">
+		<div>
+			Date begin: 
+			<my-date-picker name="mydate" [options]="myDatePickerOptions" [(ngModel)]="modelDateBegin" required></my-date-picker>
+		</div>
 
-	<p>
-		Date end: 
-		<my-date-picker name="mydate" [options]="myDatePickerOptions" [(ngModel)]="modelDateEnd" required></my-date-picker>
-	</p>
+		<div>
+			Date end: 
+			<my-date-picker name="mydate" [options]="myDatePickerOptions" [(ngModel)]="modelDateEnd" required></my-date-picker>
+		</div>
 
-	<p>
-		<button class="btn btn-submit" (click)="displayStatistic()">Выбрать</button>
-	</p>
+		<div>
+			<button class="btn btn-submit" (click)="displayStatistic()">Выбрать</button>
+		</div>
+	</div>
+
+	<div class="actions limits-area">
+		<div class="box" (click)="toggleSlideVisibility('pulse_avg_bpm')">
+			<div class="head">qwerty</div>
+			<div class="slide" *ngIf="slides.pulse_avg_bpm">
+				<div class="slide-inner">
+					fffff
+				</div>
+			</div>
+		</div>
+
+		<div class="box" (click)="toggleSlideVisibility('pulse_max_bpm')">
+			<div class="head">qwerty</div>
+			<div class="slide" *ngIf="slides.pulse_max_bpm">
+				<div class="slide-inner">
+					fffff
+				</div>
+			</div>
+		</div>
+
+		<div class="box" (click)="toggleSlideVisibility('training_time_min')">
+			<div class="head">qwerty</div>
+			<div class="slide" *ngIf="slides.training_time_min">
+				<div class="slide-inner">
+					fffff
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="statistic-area">

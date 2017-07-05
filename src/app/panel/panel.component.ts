@@ -22,7 +22,12 @@ export class PanelComponent implements OnInit {
   private modelDateBegin: Object;  
   private modelDateEnd: Object;  
   private records: Object;  
-  private data: Object;    
+  private data: Object;   
+  private slides: Object = {
+    'pulse_avg_bpm': undefined,
+    'pulse_max_bpm': undefined,
+    'training_time_min': undefined
+  }; 
 
   displayStatistic() {
     this.recordsService
@@ -31,6 +36,10 @@ export class PanelComponent implements OnInit {
           this.records = JSON.parse(data.json());
           console.log(typeof this.records, this.records);
         });
+  }
+
+  toggleSlideVisibility(index) {
+    this.slides[index] = !this.slides[index];
   }
 
 }

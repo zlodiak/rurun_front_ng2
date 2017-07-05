@@ -1,14 +1,42 @@
 .action-area{
 	background: orange;
 	height: 20%;
+	overflow: hidden;
 }
+
+	.actions{
+		width: 50%;
+		float: left;
+	}
+
+	.dates-area{
+
+	}
+
+	.limits-area{
+
+	}
+
+		.box{
+			border: 1px solid #000;
+			margin-bottom: 20px;
+		}
+
+			.head{
+				min-height: 20px;
+				background: red;
+			}
+
+			.slide{
+				background: #fff;
+			}
+
+				.slide-inner{
+
+				}
 
 .statistic-area{
 	background: yellow;
 	height: 80%;
 }
-
-	.statistic-table{
-
-	}
 
