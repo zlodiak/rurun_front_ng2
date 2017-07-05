@@ -13,10 +13,13 @@
     	<td>{{ record.fields.created_date | date:"dd-MM-yyyy" }}</td>
     	<td>{{ record.fields.training_time_min }}</td>
     	<td>{{ record.fields.pulse_avg_bpm }}</td>
-    	<td>{{ record.fields.pulse_max_bpm }}</td>
+    	<td [ngClass]="{'lower-color': record.fields.pulse_max_bpm < limitsData.pulse_max_bpm_lower, 'upper-color': record.fields.pulse_max_bpm > limitsData.pulse_max_bpm_upper}">{{ record.fields.pulse_max_bpm }}</td>
     	<td>{{ record.fields.desc | ellipsis:20 }}</td>
     </tr>
   </tbody>
 </table>
 
 {{ limitsData | json }}
+
+
+

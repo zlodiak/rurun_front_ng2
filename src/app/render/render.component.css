@@ -7,3 +7,11 @@ td{
 	padding: 10px;
 	width: 20%;
 }
+
+td.lower-color{
+	color: cyan;
+}
+
+td.upper-color{
+	color: red;
+}
