@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { PanelComponent } from './panel/panel.component';
 import { MyDatePickerModule } from 'mydatepicker';
 import { RecordsService } from './records.service';
+import { Pager } from './pager';
 import { EllipsisPipe } from './ellipsis.pipe';
 import { RenderComponent } from './render/render.component';
 import { HomeComponent } from './home/home.component';
@@ -24,7 +25,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     RenderComponent,
     HomeComponent,
     BooksComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     MdInputModule,
@@ -36,7 +37,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [RecordsService],
+  providers: [RecordsService, Pager],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
