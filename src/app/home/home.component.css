@@ -1,0 +1,6 @@
+.test-icon{
+	width: 200px;
+	height: 300px;
+	background: url('/assets/images/i5.png') center center no-repeat;
+	background-size: cover;
+}
