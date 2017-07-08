@@ -31,7 +31,7 @@
 	},
 	{
 		"model": "statistic.article", 
-		"pk": 1, 
+		"pk": 4, 
 		"fields": 
 		{
 			"author": 1, 
@@ -41,7 +41,7 @@
 	},
 	{
 		"model": "statistic.article", 
-		"pk": 2, 
+		"pk": 5, 
 		"fields": 
 		{
 			"author": 1, 
@@ -51,7 +51,7 @@
 	},
 	{
 		"model": "statistic.article", 
-		"pk": 3, 
+		"pk": 6, 
 		"fields": 
 		{
 			"author": 1, 
@@ -61,7 +61,7 @@
 	},
 	{
 		"model": "statistic.article", 
-		"pk": 1, 
+		"pk": 7, 
 		"fields": 
 		{
 			"author": 1, 
@@ -71,7 +71,7 @@
 	},
 	{
 		"model": "statistic.article", 
-		"pk": 2, 
+		"pk": 8, 
 		"fields": 
 		{
 			"author": 1, 
@@ -81,7 +81,7 @@
 	},
 	{
 		"model": "statistic.article", 
-		"pk": 3, 
+		"pk": 9, 
 		"fields": 
 		{
 			"author": 1, 
@@ -91,7 +91,7 @@
 	},
 	{
 		"model": "statistic.article", 
-		"pk": 1, 
+		"pk": 10, 
 		"fields": 
 		{
 			"author": 1, 
@@ -101,7 +101,7 @@
 	},
 	{
 		"model": "statistic.article", 
-		"pk": 2, 
+		"pk": 11, 
 		"fields": 
 		{
 			"author": 1, 
@@ -111,7 +111,7 @@
 	},
 	{
 		"model": "statistic.article", 
-		"pk": 3, 
+		"pk": 12, 
 		"fields": 
 		{
 			"author": 1, 
@@ -121,7 +121,7 @@
 	},
 	{
 		"model": "statistic.article", 
-		"pk": 1, 
+		"pk": 13, 
 		"fields": 
 		{
 			"author": 1, 
@@ -131,7 +131,7 @@
 	},
 	{
 		"model": "statistic.article", 
-		"pk": 2, 
+		"pk": 14, 
 		"fields": 
 		{
 			"author": 1, 
@@ -141,7 +141,7 @@
 	},
 	{
 		"model": "statistic.article", 
-		"pk": 3, 
+		"pk": 15, 
 		"fields": 
 		{
 			"author": 1, 
@@ -151,7 +151,7 @@
 	},
 	{
 		"model": "statistic.article", 
-		"pk": 1, 
+		"pk": 16, 
 		"fields": 
 		{
 			"author": 1, 
@@ -161,7 +161,7 @@
 	},
 	{
 		"model": "statistic.article", 
-		"pk": 2, 
+		"pk": 17, 
 		"fields": 
 		{
 			"author": 1, 
@@ -171,7 +171,7 @@
 	},
 	{
 		"model": "statistic.article", 
-		"pk": 3, 
+		"pk": 18, 
 		"fields": 
 		{
 			"author": 1, 
@@ -181,7 +181,7 @@
 	},
 	{
 		"model": "statistic.article", 
-		"pk": 1, 
+		"pk": 19, 
 		"fields": 
 		{
 			"author": 1, 
@@ -191,7 +191,7 @@
 	},
 	{
 		"model": "statistic.article", 
-		"pk": 2, 
+		"pk": 20, 
 		"fields": 
 		{
 			"author": 1, 
@@ -201,7 +201,7 @@
 	},
 	{
 		"model": "statistic.article", 
-		"pk": 3, 
+		"pk": 21, 
 		"fields": 
 		{
 			"author": 1, 
@@ -211,7 +211,7 @@
 	},						
 	{
 		"model": "statistic.article", 
-		"pk": 4, 
+		"pk": 22, 
 		"fields": 
 		{
 			"author": 1, 
