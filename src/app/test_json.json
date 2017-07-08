@@ -1,0 +1,42 @@
+[
+	{
+		"model": "statistic.article", 
+		"pk": 1, 
+		"fields": 
+		{
+			"author": 1, 
+			"title": "qwqrwr",
+			"text": "qwqfdgdgrwr"
+		}
+	},
+	{
+		"model": "statistic.article", 
+		"pk": 2, 
+		"fields": 
+		{
+			"author": 1, 
+			"title": "qwqrwr",
+			"text": "qwqfdgdgrwr"
+		}
+	},
+	{
+		"model": "statistic.article", 
+		"pk": 3, 
+		"fields": 
+		{
+			"author": 1, 
+			"title": "qwqrwr",
+			"text": "qwqfdgdgrwr"
+		}
+	},
+	{
+		"model": "statistic.article", 
+		"pk": 4, 
+		"fields": 
+		{
+			"author": 1, 
+			"title": "qwqrwr",
+			"text": "qwqfdgdgrwr"
+		}
+	}			
+]
