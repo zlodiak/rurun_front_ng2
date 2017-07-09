@@ -1,0 +1,32 @@
+.teasers{
+
+}
+
+	.teaser:hover{
+		background: blue;
+	}
+
+	.teaser{
+		margin-bottom: 20px;
+		text-align: left;
+		font-size: 16px;
+		padding: 8px 16px;
+	}
+
+		.teaser md-toolbar-row{
+			white-space: normal;
+		}
+
+			.date-outer{
+				display: flex;
+				flex-wrap: nowrap;
+				justify-content: flex-end;
+				align-items: center;
+			}
+
+
+				.date{
+					margin-left: 10px;
+				}
+
+				.material-icons { color: #fff; }

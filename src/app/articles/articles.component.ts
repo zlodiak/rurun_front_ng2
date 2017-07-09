@@ -27,9 +27,8 @@ export class ArticlesComponent implements OnInit {
   pagedItems: any[];
 
   ngOnInit() {
-      // get dummy data https://raw.githubusercontent.com/cornflourblue/angular2-pagination-example/master/dummy-data.json
-      this.http.get('https://raw.githubusercontent.com/zlodiak/rurun_front_ng2/master/src/app/test_json.json')
-          .map((response: Response) => response.json())
+      this.http.get('http://127.0.0.1:8000/articles')
+          .map((response: Response) => JSON.parse(response.json()))
           .subscribe(data => {
           		console.log(data);
 

@@ -1,29 +1,43 @@
 <div>
     <div class="container">
         <div class="text-center">
-            <h1>Angular 2 - Pagination Articles</h1>
- 
-            <!-- items being paged -->
-            <div *ngFor="let item of pagedItems">{{item.fields.title}}</div>
- 
-            <!-- pager -->
-            <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
-                <li [ngClass]="{disabled:pager.currentPage === 1}">
-                    <a (click)="setPage(1)">First</a>
-                </li>
-                <li [ngClass]="{disabled:pager.currentPage === 1}">
-                    <a (click)="setPage(pager.currentPage - 1)">Previous</a>
-                </li>
-                <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
-                    <a (click)="setPage(page)">{{page}}</a>
-                </li>
-                <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-                    <a (click)="setPage(pager.currentPage + 1)">Next</a>
-                </li>
-                <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-                    <a (click)="setPage(pager.totalPages)">Last</a>
-                </li>
-            </ul>
+          <h1>Список статей</h1>
+
+					 <div class="teasers">
+					 		<md-toolbar class="teaser" *ngFor="let item of pagedItems" color="primary">
+								<div>{{ item.fields.title }}</div>		
+
+								<md-toolbar-row>	 							 		
+								  <div>{{ item.fields.text | ellipsis:220 }}</div>	
+								</md-toolbar-row>	
+
+								<md-toolbar-row class="date-outer">  		
+									<div class="material-icons md-24 md-dark">access_time</div>
+								  <div class="date">{{ item.fields.created_date }}</div> 						 		
+						 		</md-toolbar-row>						 		
+					 		</md-toolbar>
+					 </div>
+					            
+					 
+					<div class="pagination">       
+						<ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+						  <li [ngClass]="{disabled:pager.currentPage === 1}">
+						      <a (click)="setPage(1)">First</a>
+						  </li>
+						  <li [ngClass]="{disabled:pager.currentPage === 1}">
+						      <a (click)="setPage(pager.currentPage - 1)">Previous</a>
+						  </li>
+						  <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+						      <a (click)="setPage(page)">{{page}}</a>
+						  </li>
+						  <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+						      <a (click)="setPage(pager.currentPage + 1)">Next</a>
+						  </li>
+						  <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+						      <a (click)="setPage(pager.totalPages)">Last</a>
+						  </li>
+						</ul>
+					</div>
         </div>
     </div>
 </div>

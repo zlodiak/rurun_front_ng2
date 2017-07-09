@@ -6,20 +6,20 @@ import * as _ from 'underscore';
 
 @Injectable()
 export class PaginatorService {
-    getPager(totalItems: number, currentPage: number = 1, pageSize: number = 10) {
+    getPager(totalItems: number, currentPage: number = 1, pageSize: number = 5) {
         // calculate total pages
         let totalPages = Math.ceil(totalItems / pageSize);
  
         let startPage: number, endPage: number;
-        if (totalPages <= 10) {
-            // less than 10 total pages so show all
+        if (totalPages <= 5) {
+            // less than 5 total pages so show all
             startPage = 1;
             endPage = totalPages;
         } else {
-            // more than 10 total pages so calculate start and end pages
+            // more than 5 total pages so calculate start and end pages
             if (currentPage <= 6) {
                 startPage = 1;
-                endPage = 10;
+                endPage = 5;
             } else if (currentPage + 4 >= totalPages) {
                 startPage = totalPages - 9;
                 endPage = totalPages;
