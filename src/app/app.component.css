@@ -1,0 +1,28 @@
+.header{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	background: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 80px;
+}
+
+	.header .menu-icon{
+		margin: 0;
+		min-width: 66px;
+		padding: 0;
+	}
+
+	.header .title{
+		margin: 0;
+	}	
+
+.content{
+	overflow: auto;
+	height: 100%;
+	padding-top: 80px;
+}

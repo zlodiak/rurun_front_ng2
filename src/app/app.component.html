@@ -1,13 +1,26 @@
-<h1>
-	<div (click)="test()">{{title}}--</div>
-</h1>
-<div class="nav">
-	<a [routerLink]="['/home']">home</a>
-	<a [routerLink]="['/panel']">panel</a>
-	<a [routerLink]="['/books']">books</a>
-	<a [routerLink]="['/articles']">articles</a>
-</div>
+<md-sidenav-container>
+	<div class="header">
+	  <button class="menu-icon" type="button" md-button (click)="sidenav.open()">
+	    <div class="material-icons md-48 basic-color">menu</div>
+	  </button>
+	  <h1 class="title">{{title}}</h1>
+	</div>
 
-<router-outlet></router-outlet>
+  <md-sidenav #sidenav>
+		<a [routerLink]="['/home']">home</a>
+		<a [routerLink]="['/panel']">panel</a>
+		<a [routerLink]="['/books']">books</a>
+		<a [routerLink]="['/articles']">articles</a>
+  </md-sidenav>
+
+  <div class="content">
+  	<router-outlet></router-outlet>
+  </div>	    
+</md-sidenav-container>
+
+
+
+
+
 
 

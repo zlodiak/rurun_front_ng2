@@ -1,3 +1,17 @@
+html,
+body,
+app-root,
+md-sidenav-container{
+  height: 100%;
+  overflow: hidden;
+}
+
+/* colors */
+.basic-color { color: rgba(0,0,0,.87); }
+
+
+
+
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
@@ -52,8 +66,17 @@
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
-/* Rules for using icons as white on a dark background. */
-.material-icons.md-colored { color: #f00; }
-.material-icons.md-colored.md-inactive { color: magenta; }
 
+
+
+
+
+
+
+
+
+
+.container .text-muted {
+  margin: 20px 0;
+}
 
