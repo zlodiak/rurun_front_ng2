@@ -1,0 +1,51 @@
+<div class="row line">
+	<div class="col-sm-3 label-outer">
+		<div class="label_">Дата</div>
+	</div>
+	<div class="col-sm-9 value-outer">
+		<div class="value_">{{ record.fields.created_date }}</div>
+	</div>	
+</div>
+
+<div class="row line">
+	<div class="col-sm-3 label-outer">
+		<div class="label_">Время тренировки</div>
+	</div>
+	<div class="col-sm-9 value-outer">
+		<div class="value_">{{ record.fields.training_time_min }}</div>
+	</div>	
+</div>
+
+<div class="row line">
+	<div class="col-sm-3 label-outer">
+		<div class="label_">Средний пульс</div>
+	</div>
+	<div class="col-sm-9 value-outer">
+		<div class="value_">{{ record.fields.pulse_avg_bpm }}</div>
+	</div>	
+</div>
+
+<div class="row line">
+	<div class="col-sm-3 label-outer">
+		<div class="label_">Максимальный пульс</div>
+	</div>
+	<div class="col-sm-9 value-outer">
+		<div class="value_">{{ record.fields.pulse_max_bpm }}</div>
+	</div>	
+</div>
+
+<div class="row line">
+	<div class="col-sm-3 label-outer">
+		<div class="label_">Примечания</div>
+	</div>
+	<div class="col-sm-9 value-outer">
+		<div class="value_">{{ record.fields.desc }}</div>
+	</div>	
+</div>
+
+<div class="row line">
+	<div class="col-sm-12">
+		<button md-button class="pull-right btn btn-back basic-bg-color" (click)="back()">Вернуться к таблице</button>	
+	</div>
+</div>
+

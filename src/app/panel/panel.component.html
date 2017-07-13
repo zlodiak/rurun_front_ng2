@@ -3,10 +3,15 @@
 </div>
 
 <div class="statistic-area container-fluid" *ngIf="!showDetailsPage && records">
-	<app-render [renderData]="records" [limitsData]="limits" (onShowDetails)="setDetailsPage($event)"></app-render>
+	<app-render [renderData]="records" 
+							[limitsData]="limits" 
+							(onShowDetailsPage)="setDetailsPage($event)">
+	</app-render>
 </div>
 
 <div class="statistic-details-area container-fluid" *ngIf="showDetailsPage">
-	details
+	<app-record-details [record]="detailsPageRecord" 
+											(onClickBackBtn)="setVisibilityDetailsPage(false)">
+	</app-record-details>
 </div>
 

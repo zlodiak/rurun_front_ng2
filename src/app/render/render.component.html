@@ -10,7 +10,7 @@
   </thead>
 
   <tbody>
-    <tr id="tableBody" *ngFor="let record of renderData; let i = index" (click)="showDetails()">
+    <tr id="tableBody" *ngFor="let record of renderData; let i = index" (click)="showDetails(renderData[i])">
     	<td>
         {{ record.fields.created_date | date:"dd-MM-yyyy" }}
       </td>

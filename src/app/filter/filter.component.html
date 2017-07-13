@@ -14,7 +14,7 @@
 
 		<div class="row btns-area">
 			<div class="col-xs-12">
-				<button md-button class="btn btn-submit" (click)="submitFilter()">Выбрать</button>				
+				<button md-button class="btn btn-submit basic-bg-color" (click)="submitFilter()">Выбрать</button>				
 			</div>
 		</div>	
 	</div>
@@ -23,6 +23,23 @@
 		<h3>Фильтр по значениям</h3>
 
 		<div class="row">
+			<div class="col-sm-4">
+				<div class="box" (click)="toggleSlideVisibility('training_time_min')">
+					<div class="head">Время тренировки</div>
+					<div class="slide" *ngIf="slides.training_time_min">
+						<div class="slide-inner" (click)="stopPropagator($event)">
+							<md-input-container>
+							  <input mdInput placeholder="Верхний предел" type="number" [(ngModel)]="limits['training_time_min_upper']">
+							</md-input-container>
+
+							<md-input-container>
+							  <input mdInput placeholder="Нижний предел" type="number" [(ngModel)]="limits['training_time_min_lower']">
+							</md-input-container>	
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="col-sm-4">
 				<div class="box" (click)="toggleSlideVisibility('pulse_avg_bpm')">
 					<div class="head">Средний пульс</div>
@@ -51,23 +68,6 @@
 
 							<md-input-container>
 							  <input mdInput placeholder="Нижний предел" type="number" [(ngModel)]="limits['pulse_max_bpm_lower']">
-							</md-input-container>	
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-sm-4">
-				<div class="box" (click)="toggleSlideVisibility('training_time_min')">
-					<div class="head">Время тренировки</div>
-					<div class="slide" *ngIf="slides.training_time_min">
-						<div class="slide-inner" (click)="stopPropagator($event)">
-							<md-input-container>
-							  <input mdInput placeholder="Верхний предел" type="number" [(ngModel)]="limits['training_time_min_upper']">
-							</md-input-container>
-
-							<md-input-container>
-							  <input mdInput placeholder="Нижний предел" type="number" [(ngModel)]="limits['training_time_min_lower']">
 							</md-input-container>	
 						</div>
 					</div>

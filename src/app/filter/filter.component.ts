@@ -40,7 +40,7 @@ export class FilterComponent implements OnInit {
     'training_time_min_lower': 0
   };   
 
-  @Output() onSubmitFilter = new EventEmitter<object>();
+  @Output() onSubmitFilter = new EventEmitter<Object>();
 
   submitFilter() {
     this.recordsService

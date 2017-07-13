@@ -13,12 +13,19 @@ export class PanelComponent implements OnInit {
   ngOnInit() {
   }  
 
+  private detailsPageRecord: Object = {}; 
   private showDetailsPage: Boolean = false; 
   private records: Object;  
   private limits: Object;  
 
-  setDetailsPage(val) {
-     this.showDetailsPage = true;
+  setVisibilityDetailsPage(visibility) {
+    console.log(visibility);
+    this.showDetailsPage = visibility;
+  };
+
+  setDetailsPage(obj) {
+    this.setVisibilityDetailsPage(obj.visibility);
+    this.detailsPageRecord = obj.record;
   };
 
   setRenderData(obj) {

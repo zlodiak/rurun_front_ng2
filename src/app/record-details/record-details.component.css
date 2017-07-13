@@ -1,0 +1,21 @@
+.line{
+	margin-bottom: 10px;
+}
+
+	.label_:after{
+		content: ':';
+		margin-right: 6px;
+	}
+
+	.label_{
+		font-weight: bold;
+	}
+
+	.value_{
+
+	}
+
+	.btn-back{
+		color: #fff;
+		margin-top: 20px;
+	}

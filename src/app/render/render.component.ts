@@ -14,11 +14,14 @@ export class RenderComponent implements OnInit {
 
   @Input() renderData: Object;
   @Input() limitsData: Object;
-  @Output() onShowDetails = new EventEmitter<boolean>();
+  @Output() onShowDetailsPage = new EventEmitter<Object>();
 
-  showDetails() {
-  	console.log('show details');
-  	this.onShowDetails.emit(true);
+  showDetails(record) {
+  	console.log('show details', record);
+  	this.onShowDetailsPage.emit({
+      visibility: true,
+      record: record
+    });
   }
 
 }

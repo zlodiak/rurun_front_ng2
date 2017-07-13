@@ -19,6 +19,7 @@ import { BooksComponent } from './books/books.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { FilterComponent } from './filter/filter.component';
+import { RecordDetailsComponent } from './record-details/record-details.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { FilterComponent } from './filter/filter.component';
     NotFoundComponent,
     ArticlesComponent,
     FilterComponent,
+    RecordDetailsComponent,
   ],
   imports: [
     MdListModule,
