@@ -14,5 +14,4 @@ export class AppComponent {
 		console.log(rs);
   };
 
-
 }

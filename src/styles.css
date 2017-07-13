@@ -4,10 +4,16 @@ app-root,
 md-sidenav-container{
   height: 100%;
   overflow: hidden;
+  background: #fff;
+}
+
+.mat-sidenav-container{
+  background: #fff;
 }
 
 /* colors */
 .basic-color { color: rgba(0,0,0,.87); }
+.basic-bg-color { background-color: #3f51b5 }
 
 
 
@@ -76,7 +82,4 @@ md-sidenav-container{
 
 
 
-.container .text-muted {
-  margin: 20px 0;
-}
 

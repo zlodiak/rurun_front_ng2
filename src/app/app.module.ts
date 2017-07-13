@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MdButtonModule, MdInputModule, MdToolbarModule, MdSidenavModule } from '@angular/material';
+import { MdButtonModule, MdInputModule, MdToolbarModule, MdSidenavModule, MdListModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -31,6 +31,7 @@ import { ArticlesComponent } from './articles/articles.component';
     ArticlesComponent,
   ],
   imports: [
+    MdListModule,
     MdSidenavModule,
     MdToolbarModule,
     MdInputModule,

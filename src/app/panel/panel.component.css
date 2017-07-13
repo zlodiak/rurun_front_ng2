@@ -1,30 +1,48 @@
 .action-area{
-	background: orange;
-	height: 20%;
 	overflow: hidden;
 }
 
 	.actions{
-		width: 50%;
-		float: left;
+
 	}
 
 	.dates-area{
 
 	}
 
+		.datepicker-area{
+			margin-bottom: 10px;
+		}
+
+		.btns-area{
+			margin-bottom: 20px;
+		}
+
+			.btn-submit{
+				background: #3f51b5;
+				color: #fff;
+			}
+
 	.limits-area{
 
 	}
 
 		.box{
-			border: 1px solid #000;
-			margin-bottom: 20px;
+			border-radius: 5px;
+			margin-bottom: 15px;
+			overflow: hidden;
+			background: #fff;
+			border: 1px solid #ccc;
 		}
 
 			.head{
-				min-height: 20px;
-				background: red;
+				height: 34px;
+				width: 100%;
+				padding: 0 5px;
+			  display: flex;
+			  flex-wrap: nowrap;
+			  align-content: center;
+			  align-items: center;				
 			}
 
 			.slide{
@@ -36,8 +54,11 @@
 				}
 
 .statistic-area{
-	background: yellow;
-	height: 80%;
+	
+}
+
+.statistic-details-area{
+	
 }
 
 
@@ -63,3 +84,5 @@
 .mat-slider-vertical {
   height: 300px;
 }
+
+

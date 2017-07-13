@@ -1,9 +1,22 @@
 .statistic-table{
 		width: 100%;
+		border-color: #ccc;
 	}
 
 
-td{
+
+tbody tr:hover{
+	background: blue;
+	color: #fff;
+	font-weight: bold;
+}
+
+tbody tr{
+	cursor: pointer;
+}
+
+
+td, th{
 	padding: 10px;
 	width: 20%;
 }

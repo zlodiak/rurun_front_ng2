@@ -1,15 +1,15 @@
 <table class="statistic-table" border="1" celpadding="8">
   <thead>
     <tr>
-      <td>Дата</td>
-      <td>Время тренировки</td>
-      <td>Сердний пульс</td>
-      <td>Максимальный пульс</td>
-      <td>Примечания</td>
+      <th>Дата</th>
+      <th>Время тренировки</th>
+      <th>Сердний пульс</th>
+      <th>Максимальный пульс</th>
+      <th>Примечания</th>
     </tr>
   </thead>
   <tbody>
-    <tr id="tableBody" *ngFor="let record of renderData; let i = index">
+    <tr id="tableBody" *ngFor="let record of renderData; let i = index" (click)="showDetails()">
     	<td>{{ record.fields.created_date | date:"dd-MM-yyyy" }}</td>
     	<td>{{ record.fields.training_time_min }}</td>
     	<td>{{ record.fields.pulse_avg_bpm }}</td>

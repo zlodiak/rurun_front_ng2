@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-render',
@@ -14,5 +14,11 @@ export class RenderComponent implements OnInit {
 
   @Input() renderData: Object;
   @Input() limitsData: Object;
+  @Output() onShowDetails = new EventEmitter<boolean>();
+
+  showDetails() {
+  	console.log('show details');
+  	this.onShowDetails.emit(true);
+  }
 
 }

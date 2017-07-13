@@ -9,6 +9,7 @@
 	left: 0;
 	right: 0;
 	height: 80px;
+	z-index: 200;
 }
 
 	.header .menu-icon{
@@ -26,3 +27,11 @@
 	height: 100%;
 	padding-top: 80px;
 }
+
+.menu-list{
+	min-width: 200px;
+}
+
+	.menu-list a{
+		
+	}

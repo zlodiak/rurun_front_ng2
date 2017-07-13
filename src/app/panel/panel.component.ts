@@ -19,6 +19,7 @@ export class PanelComponent implements OnInit {
       dateFormat: 'dd.mm.yyyy',
   };
 
+  private showDetailsPage: Boolean = false;
   private modelDateBegin: Object;  
   private modelDateEnd: Object;  
   private records: Object;  
@@ -54,6 +55,9 @@ export class PanelComponent implements OnInit {
     ev.stopPropagation();
   };
 
-
+  setDetailsPage(val) {
+     console.log('set details', val);
+     this.showDetailsPage = true;
+  };
 
 }

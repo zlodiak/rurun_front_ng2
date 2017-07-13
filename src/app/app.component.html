@@ -7,10 +7,23 @@
 	</div>
 
   <md-sidenav #sidenav>
-		<a [routerLink]="['/home']">home</a>
-		<a [routerLink]="['/panel']">panel</a>
-		<a [routerLink]="['/books']">books</a>
-		<a [routerLink]="['/articles']">articles</a>
+		<md-list class="menu-list">
+		  <md-list-item>
+		  	<a class="basic-color" (click)="sidenav.close()" [routerLink]="['/home']">home</a>
+		  </md-list-item>
+
+		  <md-list-item>
+		  	<a class="basic-color" (click)="sidenav.close()" [routerLink]="['/panel']">panel</a>
+		  </md-list-item>
+
+		  <md-list-item>
+		  	<a class="basic-color" (click)="sidenav.close()" [routerLink]="['/books']">books</a>
+		  </md-list-item>
+
+		  <md-list-item>
+		  	<a class="basic-color" (click)="sidenav.close()" [routerLink]="['/articles']">articles</a>
+		  </md-list-item>      
+		</md-list>		
   </md-sidenav>
 
   <div class="content">
