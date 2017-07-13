@@ -25,3 +25,7 @@ td.lower-color{
 td.upper-color{
 	color: red;
 }
+
+td.middle-color{
+	color: #000;
+}
