@@ -1,0 +1,60 @@
+.actions{
+
+}
+
+.dates-area{
+
+}
+
+	.datepicker-area{
+		margin-bottom: 10px;
+	}
+
+	.btns-area{
+		margin-bottom: 20px;
+	}
+
+		.btn-submit{
+			background: #3f51b5;
+			color: #fff;
+		}
+
+.limits-area{
+
+}
+
+	.box{
+		border-radius: 5px;
+		margin-bottom: 15px;
+		overflow: hidden;
+		background: #fff;
+		border: 1px solid #ccc;
+	}
+
+		.head{
+			height: 34px;
+			width: 100%;
+			padding: 0 5px;
+		  display: flex;
+		  flex-wrap: nowrap;
+		  align-content: center;
+		  align-items: center;				
+		}
+
+		.slide{
+			background: #fff;
+		}
+
+			.slide-inner{
+				padding: 10px;
+			}
+
+
+.mat-slider-horizontal {
+  width: 300px;
+}
+
+.mat-slider-vertical {
+  height: 300px;
+}
+

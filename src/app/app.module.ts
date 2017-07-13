@@ -18,6 +18,7 @@ import { HomeComponent } from './home/home.component';
 import { BooksComponent } from './books/books.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ArticlesComponent } from './articles/articles.component';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ArticlesComponent } from './articles/articles.component';
     BooksComponent,
     NotFoundComponent,
     ArticlesComponent,
+    FilterComponent,
   ],
   imports: [
     MdListModule,
