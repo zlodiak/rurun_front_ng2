@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
-import { IMyDpOptions } from 'mydatepicker';
 import { RecordsService } from '../records.service';
 
 
@@ -16,14 +15,10 @@ export class FilterComponent implements OnInit {
   ngOnInit() {
   }
 
-  private modelDateBegin: Object;  
-  private modelDateEnd: Object;  
+  private modelDateBegin: string;  
+  private modelDateEnd: string;  
   private records: Object;  
   private data: Object;   
-
-  private myDatePickerOptions: IMyDpOptions = {
-      dateFormat: 'dd.mm.yyyy',
-  };
 
   private slides: Object = {
     'pulse_avg_bpm': undefined,
@@ -43,8 +38,11 @@ export class FilterComponent implements OnInit {
   @Output() onSubmitFilter = new EventEmitter<Object>();
 
   submitFilter() {
+    let modelDateBeginUnix = Date.parse(this.modelDateBegin)/1000;
+    let modelDateEndUnix = Date.parse(this.modelDateEnd)/1000;
+
     this.recordsService
-        .getRecords(this.modelDateBegin['epoc'], this.modelDateEnd['epoc'])
+        .getRecords(modelDateBeginUnix, modelDateEndUnix)
         .subscribe(data => {
           this.records = JSON.parse(data.json());
           this.onSubmitFilter.emit({

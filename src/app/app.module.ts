@@ -2,8 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MdButtonModule, MdInputModule, MdToolbarModule, MdSidenavModule, MdListModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MdButtonModule, 
+         MdInputModule, 
+         MdToolbarModule, 
+         MdSidenavModule, 
+         MdListModule, 
+         MdDatepickerModule,
+         MdNativeDateModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,6 +41,8 @@ import { RecordDetailsComponent } from './record-details/record-details.componen
     RecordDetailsComponent,
   ],
   imports: [
+    MdNativeDateModule,
+    MdDatepickerModule,
     MdListModule,
     MdSidenavModule,
     MdToolbarModule,

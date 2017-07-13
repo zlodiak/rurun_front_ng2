@@ -4,11 +4,19 @@
 
 		<div class="row datepicker-area">
 			<div class="col-xs-6">
-				<my-date-picker name="mydate" [options]="myDatePickerOptions" [(ngModel)]="modelDateBegin" required></my-date-picker>
+				<md-input-container>
+				  <input mdInput [mdDatepicker]="picker_from" [(ngModel)]="modelDateBegin" placeholder="От">
+				  <button mdSuffix [mdDatepickerToggle]="picker_from"></button>
+				</md-input-container>
+				<md-datepicker #picker_from></md-datepicker>
 			</div>
 
 			<div class="col-xs-6">
-				<my-date-picker name="mydate" [options]="myDatePickerOptions" [(ngModel)]="modelDateEnd" required></my-date-picker>
+				<md-input-container>
+				  <input mdInput [mdDatepicker]="picker_to" [(ngModel)]="modelDateEnd" placeholder="До">
+				  <button mdSuffix [mdDatepickerToggle]="picker_to"></button>
+				</md-input-container>
+				<md-datepicker #picker_to></md-datepicker>
 			</div>
 		</div>
 
@@ -25,7 +33,7 @@
 		<div class="row">
 			<div class="col-sm-4">
 				<div class="box" (click)="toggleSlideVisibility('training_time_min')">
-					<div class="head">Время тренировки</div>
+					<div class="head">Время тренировки (мин)</div>
 					<div class="slide" *ngIf="slides.training_time_min">
 						<div class="slide-inner" (click)="stopPropagator($event)">
 							<md-input-container>
@@ -42,7 +50,7 @@
 
 			<div class="col-sm-4">
 				<div class="box" (click)="toggleSlideVisibility('pulse_avg_bpm')">
-					<div class="head">Средний пульс</div>
+					<div class="head">Средний пульс (уд/мин)</div>
 					<div class="slide" *ngIf="slides.pulse_avg_bpm">
 						<div class="slide-inner" (click)="stopPropagator($event)">
 							<md-input-container>
@@ -59,7 +67,7 @@
 
 			<div class="col-sm-4">
 				<div class="box" (click)="toggleSlideVisibility('pulse_max_bpm')">
-					<div class="head">Максимальный пульс</div>
+					<div class="head">Максимальный пульс (уд/мин)</div>
 					<div class="slide" *ngIf="slides.pulse_max_bpm">
 						<div class="slide-inner" (click)="stopPropagator($event)">
 							<md-input-container>
