@@ -3,25 +3,28 @@
 	  <button class="menu-icon" type="button" md-button (click)="sidenav.open()">
 	    <div class="material-icons md-48 basic-color">menu</div>
 	  </button>
-	  <h1 class="title">{{title}}</h1>
+	  <h1 class="title">
+	  	<span>RuRun</span>
+	  	<span class="variable-title" [innerHTML]="headerTitle" *ngIf="headerTitle"></span>
+	  </h1>
 	</div>
 
-  <md-sidenav #sidenav>
+  <md-sidenav #sidenav mode="over">
 		<md-list class="menu-list">
 		  <md-list-item>
-		  	<a class="basic-color" (click)="sidenav.close()" [routerLink]="['/home']">home</a>
+		  	<a class="basic-color" (click)="handlerClickMenu(sidenav, '')" [routerLink]="['/home']">Начало</a>
 		  </md-list-item>
 
 		  <md-list-item>
-		  	<a class="basic-color" (click)="sidenav.close()" [routerLink]="['/panel']">panel</a>
+		  	<a class="basic-color" (click)="handlerClickMenu(sidenav, 'Статистика')" [routerLink]="['/panel']">Статистика</a>
 		  </md-list-item>
 
 		  <md-list-item>
-		  	<a class="basic-color" (click)="sidenav.close()" [routerLink]="['/books']">books</a>
+		  	<a class="basic-color" (click)="handlerClickMenu(sidenav, 'Книги')" [routerLink]="['/books']">Книги</a>
 		  </md-list-item>
 
 		  <md-list-item>
-		  	<a class="basic-color" (click)="sidenav.close()" [routerLink]="['/articles']">articles</a>
+		  	<a class="basic-color" (click)="handlerClickMenu(sidenav, 'Заметки')" [routerLink]="['/articles']">Заметки</a>
 		  </md-list-item>      
 		</md-list>		
   </md-sidenav>

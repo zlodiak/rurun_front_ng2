@@ -16,6 +16,7 @@ import { AppComponent } from './app.component';
 import { PanelComponent } from './panel/panel.component';
 import { MyDatePickerModule } from 'mydatepicker';
 import { PaginatorService } from './services/paginator.service';
+import { DateformatService } from './services/dateformat.service';
 import { RecordsService } from './records.service';
 import { Pager } from './pager';
 import { EllipsisPipe } from './ellipsis.pipe';
@@ -55,7 +56,12 @@ import { RecordDetailsComponent } from './record-details/record-details.componen
     HttpModule,
     AppRoutingModule
   ],
-  providers: [RecordsService, Pager, PaginatorService],
+  providers: [
+    RecordsService, 
+    Pager, 
+    PaginatorService, 
+    DateformatService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

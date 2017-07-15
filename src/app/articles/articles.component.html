@@ -1,43 +1,34 @@
-<div>
-    <div class="container">
-        <div class="text-center">
-          <h1>Список статей</h1>
+<div class="container-fluid">
+	<div class="row teasers">
+		<div class="teaser col-md-6" *ngFor="let item of pagedItems" color="primary">
+		<h3 class="title" [innerHTML]="item.fields.title"></h3>		
 
-					 <div class="teasers">
-					 		<md-toolbar class="teaser" *ngFor="let item of pagedItems" color="primary">
-								<div>{{ item.fields.title }}</div>		
+		<div [innerHTML]="item.fields.text | ellipsis:220"></div>	
 
-								<md-toolbar-row>	 							 		
-								  <div>{{ item.fields.text | ellipsis:220 }}</div>	
-								</md-toolbar-row>	
-
-								<md-toolbar-row class="date-outer">  		
-									<div class="material-icons md-24 md-dark">access_time</div>
-								  <div class="date">{{ item.fields.created_date }}</div> 						 		
-						 		</md-toolbar-row>						 		
-					 		</md-toolbar>
-					 </div>
-					            
-					 
-					<div class="pagination">       
-						<ul *ngIf="pager.pages && pager.pages.length" class="pagination">
-						  <li [ngClass]="{disabled:pager.currentPage === 1}">
-						      <a (click)="setPage(1)">First</a>
-						  </li>
-						  <li [ngClass]="{disabled:pager.currentPage === 1}">
-						      <a (click)="setPage(pager.currentPage - 1)">Previous</a>
-						  </li>
-						  <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
-						      <a (click)="setPage(page)">{{page}}</a>
-						  </li>
-						  <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-						      <a (click)="setPage(pager.currentPage + 1)">Next</a>
-						  </li>
-						  <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-						      <a (click)="setPage(pager.totalPages)">Last</a>
-						  </li>
-						</ul>
-					</div>
-        </div>
-    </div>
+		<div class="date-outer pull-right">
+			<span class="date">{{ item.fields.created_date.split('T')[0] }}</span>
+			<span class="time">{{ item.fields.created_date.split('T')[1].slice(0, -4) }}</span>
+		</div> 						 		
+		</div>
+	</div>	           
+	 
+	<div class="row pagination">       
+		<ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+		  <li [ngClass]="{disabled:pager.currentPage === 1}">
+		      <a (click)="setPage(1)">First</a>
+		  </li>
+		  <li [ngClass]="{disabled:pager.currentPage === 1}">
+		      <a (click)="setPage(pager.currentPage - 1)">Previous</a>
+		  </li>
+		  <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+		      <a (click)="setPage(page)">{{page}}</a>
+		  </li>
+		  <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+		      <a (click)="setPage(pager.currentPage + 1)">Next</a>
+		  </li>
+		  <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+		      <a (click)="setPage(pager.totalPages)">Last</a>
+		  </li>
+		</ul>
+	</div>
 </div>

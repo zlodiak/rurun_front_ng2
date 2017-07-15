@@ -7,11 +7,10 @@ import * as _ from 'underscore';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'RuRun';
+  private headerTitle: string;
 
-  test() {
-	  let rs = _.map([1, 2, 3], function(num){ return num * 3; });
-		console.log(rs);
+  private handlerClickMenu(sidenav: any, headerTitle: string) {
+  	this.headerTitle = headerTitle;
+		sidenav.close();
   };
-
 }
