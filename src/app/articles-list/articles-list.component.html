@@ -1,0 +1,14 @@
+<div class="container-fluid">
+	<div class="row teasers">
+		<div class="teaser col-md-6" *ngFor="let article of articles | orderBy:'fields.created_date':true" color="primary">
+		<h3 class="title" [innerHTML]="article.fields.title"></h3>		
+
+		<div [innerHTML]="article.fields.text | ellipsis:220"></div>	
+
+		<div class="date-outer pull-right">
+			<span class="date">{{ article.fields.created_date.split('T')[0] }}</span>
+			<span class="time">{{ article.fields.created_date.split('T')[1].slice(0, -4) }}</span>
+		</div> 						 		
+		</div>
+	</div>	           
+</div>

@@ -10,12 +10,10 @@ import { MdButtonModule,
          MdListModule, 
          MdDatepickerModule,
          MdNativeDateModule } from '@angular/material';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PanelComponent } from './panel/panel.component';
 import { MyDatePickerModule } from 'mydatepicker';
-import { PaginatorService } from './services/paginator.service';
 import { DateformatService } from './services/dateformat.service';
 import { RecordsService } from './records.service';
 import { Pager } from './pager';
@@ -29,6 +27,7 @@ import { FilterComponent } from './filter/filter.component';
 import { RecordDetailsComponent } from './record-details/record-details.component';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import { OrderModule } from 'ngx-order-pipe';
+import { ArticlesListComponent } from './articles-list/articles-list.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +41,7 @@ import { OrderModule } from 'ngx-order-pipe';
     ArticlesComponent,
     FilterComponent,
     RecordDetailsComponent,
+    ArticlesListComponent,
   ],
   imports: [
     OrderModule,
@@ -62,8 +62,7 @@ import { OrderModule } from 'ngx-order-pipe';
   ],
   providers: [
     RecordsService, 
-    Pager, 
-    PaginatorService, 
+    Pager,  
     DateformatService
   ],
   bootstrap: [AppComponent]
