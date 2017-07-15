@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
@@ -21,5 +21,12 @@ export class ArticlesListComponent implements OnInit {
             this.articles = data;
         });  	
   }
+
+  @Output() onClickArticleTeaser = new EventEmitter<Object>();
+
+  private openArticleDetails(articleObj) {
+  	console.log(articleObj);
+  	this.onClickArticleTeaser.emit(articleObj);
+  }  
 
 }

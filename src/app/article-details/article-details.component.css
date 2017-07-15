@@ -1,0 +1,24 @@
+.article-outer{
+	padding-bottom: 20px;
+}
+
+	.article{
+		overflow: hidden;
+	}
+
+		.title{
+			margin-top: 0;
+		}
+
+		.text{
+			margin-bottom: 10px;
+		}
+
+		.date-outer{
+			font-size: 70%;
+			margin-bottom: 10px;
+		}		
+
+.btn-back{
+	color: #fff;
+}

@@ -1,3 +1,6 @@
-<app-articles-list *ngIf="!showArticleDetails"></app-articles-list>
+<app-articles-list 	*ngIf="!showArticleDetails" 
+										(onClickArticleTeaser)="handlerClickArticleTeaser($event)"></app-articles-list>
 
-<div *ngIf="showArticleDetails">ggggg</div>
+<app-article-details 	*ngIf="showArticleDetails" 
+											(onClickBackBtn)="setVisibilityDetailsPage(false)" 
+											[articleObj]="articleObj"></app-article-details>

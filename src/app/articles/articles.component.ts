@@ -11,11 +11,22 @@ import { ArticlesListComponent } from '../articles-list/articles-list.component'
 export class ArticlesComponent implements OnInit {
 
   private showArticleDetails: Boolean = false;
+  private articleObj: Object;
 
   constructor() { }
 
   ngOnInit() {
 
   }
+
+  private setVisibilityDetailsPage(val):void {
+    this.showArticleDetails = val;
+  }  
+
+  private handlerClickArticleTeaser(articleObj) {
+    console.log(articleObj);
+    this.articleObj = articleObj;
+    this.setVisibilityDetailsPage(true);
+  };
 
 }

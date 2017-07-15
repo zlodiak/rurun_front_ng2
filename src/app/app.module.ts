@@ -28,6 +28,7 @@ import { RecordDetailsComponent } from './record-details/record-details.componen
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import { OrderModule } from 'ngx-order-pipe';
 import { ArticlesListComponent } from './articles-list/articles-list.component';
+import { ArticleDetailsComponent } from './article-details/article-details.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { ArticlesListComponent } from './articles-list/articles-list.component';
     FilterComponent,
     RecordDetailsComponent,
     ArticlesListComponent,
+    ArticleDetailsComponent,
   ],
   imports: [
     OrderModule,
