@@ -27,6 +27,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { FilterComponent } from './filter/filter.component';
 import { RecordDetailsComponent } from './record-details/record-details.component';
+import { Ng2OrderModule } from 'ng2-order-pipe';
+import { OrderModule } from 'ngx-order-pipe';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { RecordDetailsComponent } from './record-details/record-details.componen
     RecordDetailsComponent,
   ],
   imports: [
+    OrderModule,
+    Ng2OrderModule,
     MdNativeDateModule,
     MdDatepickerModule,
     MdListModule,
