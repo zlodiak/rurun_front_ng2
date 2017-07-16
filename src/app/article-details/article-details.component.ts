@@ -7,16 +7,22 @@ import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 })
 export class ArticleDetailsComponent implements OnInit {
 
+  @Input() articleObj: Object;
+  @Output() onClickBackBtn = new EventEmitter<Boolean>();  
+
   constructor() { }
 
   ngOnInit() {
+    this.scrollToTop();
   }
-
-	@Input() articleObj: Object;
-  @Output() onClickBackBtn = new EventEmitter<Boolean>();
 
   private back(): void {
   	this.onClickBackBtn.emit();
+  };
+
+  private scrollToTop(): void {
+    let el = document.getElementById('content');
+    el.scrollTop = 0;
   };
 
 }

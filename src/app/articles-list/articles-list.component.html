@@ -1,5 +1,5 @@
-<div class="container-fluid">
-	<div class="row teasers">
+<div class="container-fluid" id="articlesContainer">
+	<div class="row teasers" id="teasers">
 		<div 	class="teaser col-md-6" 
 					*ngFor="let article of articles | orderBy:'create_date_unix':true; let i = index" 
 					(click)="openArticleDetails(articles[i])">

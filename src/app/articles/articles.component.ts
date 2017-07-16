@@ -24,7 +24,7 @@ export class ArticlesComponent implements OnInit {
   }  
 
   private handlerClickArticleTeaser(articleObj) {
-    console.log(articleObj);
+    //console.log(articleObj);
     this.articleObj = articleObj;
     this.setVisibilityDetailsPage(true);
   };

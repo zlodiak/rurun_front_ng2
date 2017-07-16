@@ -11,6 +11,8 @@ export class ArticlesListComponent implements OnInit {
 
 	private articles: any[];
 
+  @Output() onClickArticleTeaser = new EventEmitter<Object>();
+
   constructor(private http: Http) { }
 
   ngOnInit() {
@@ -19,15 +21,16 @@ export class ArticlesListComponent implements OnInit {
         .subscribe(data => {
         		//console.log(data);
             let changedDataObj = this.addUnixDatePropToObj(data);
-            console.log(changedDataObj);
+            //console.log(changedDataObj);
             this.articles = data;
         });  	
   }
 
-  @Output() onClickArticleTeaser = new EventEmitter<Object>();
+  private openArticleDetails(articleObj): void {
+    let teasersScrollTop = this.getScrollTop('content');
 
-  private openArticleDetails(articleObj) {
-  	console.log(articleObj);
+  	//console.log(articleObj, teasersScrollTop);
+
   	this.onClickArticleTeaser.emit(articleObj);
   }  
 
@@ -45,6 +48,15 @@ export class ArticlesListComponent implements OnInit {
     }
 
     return dataObj;
+  };
+
+  private getScrollTop(id): Number {
+    let el = document.getElementById(id);
+    let scrollTop = el.scrollTop;
+
+    //console.log(id, '--', el, '--', scrollTop);
+
+    return scrollTop;
   };
 
 }

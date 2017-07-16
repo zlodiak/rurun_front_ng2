@@ -1,5 +1,6 @@
 <app-articles-list 	*ngIf="!showArticleDetails" 
-										(onClickArticleTeaser)="handlerClickArticleTeaser($event)"></app-articles-list>
+										(onClickArticleTeaser)="handlerClickArticleTeaser($event)" 
+										id="articlesList"></app-articles-list>
 
 <app-article-details 	*ngIf="showArticleDetails" 
 											(onClickBackBtn)="setVisibilityDetailsPage(false)" 
