@@ -1,7 +1,7 @@
 <div class="container-fluid">
 	<div class="row teasers">
 		<div 	class="teaser col-md-6" 
-					*ngFor="let article of articles | orderBy:'fields.created_date':true; let i = index" 
+					*ngFor="let article of articles | orderBy:'create_date_unix':true; let i = index" 
 					(click)="openArticleDetails(articles[i])">
 					
 			<h3 class="title" [innerHTML]="article.fields.title"></h3>	

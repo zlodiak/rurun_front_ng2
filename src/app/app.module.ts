@@ -10,17 +10,15 @@ import { MdButtonModule,
          MdListModule, 
          MdDatepickerModule,
          MdNativeDateModule } from '@angular/material';
+         
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PanelComponent } from './panel/panel.component';
-import { MyDatePickerModule } from 'mydatepicker';
 import { DateformatService } from './services/dateformat.service';
 import { RecordsService } from './records.service';
-import { Pager } from './pager';
 import { EllipsisPipe } from './ellipsis.pipe';
 import { RenderComponent } from './render/render.component';
 import { HomeComponent } from './home/home.component';
-import { BooksComponent } from './books/books.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { FilterComponent } from './filter/filter.component';
@@ -37,7 +35,6 @@ import { ArticleDetailsComponent } from './article-details/article-details.compo
     EllipsisPipe,
     RenderComponent,
     HomeComponent,
-    BooksComponent,
     NotFoundComponent,
     ArticlesComponent,
     FilterComponent,
@@ -56,15 +53,13 @@ import { ArticleDetailsComponent } from './article-details/article-details.compo
     MdInputModule,
     BrowserAnimationsModule,
     MdButtonModule,
-    MyDatePickerModule,
     BrowserModule,
     FormsModule,
     HttpModule,
     AppRoutingModule
   ],
   providers: [
-    RecordsService, 
-    Pager,  
+    RecordsService,  
     DateformatService
   ],
   bootstrap: [AppComponent]

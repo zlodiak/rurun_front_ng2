@@ -18,6 +18,8 @@ export class ArticlesListComponent implements OnInit {
         .map((response: Response) => JSON.parse(response.json()))
         .subscribe(data => {
         		//console.log(data);
+            let changedDataObj = this.addUnixDatePropToObj(data);
+            console.log(changedDataObj);
             this.articles = data;
         });  	
   }
@@ -28,5 +30,21 @@ export class ArticlesListComponent implements OnInit {
   	console.log(articleObj);
   	this.onClickArticleTeaser.emit(articleObj);
   }  
+
+  private addUnixDatePropToObj(dataObj): Object {
+    let unixTimeStamp: Number;
+    let changedObj: Object;
+
+    for(var prop in dataObj) {
+      if (!dataObj.hasOwnProperty(prop)) continue;
+
+      unixTimeStamp = parseInt((new Date(dataObj[prop].fields.created_date).getTime() / 1000).toFixed(0));
+      //console.log(unixTimeStamp)
+
+      dataObj[prop].create_date_unix = unixTimeStamp;
+    }
+
+    return dataObj;
+  };
 
 }

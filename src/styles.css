@@ -76,7 +76,10 @@ md-sidenav-container{
 
 
 
-
+.mat-sidenav-content{
+  /*height: calc(100% - 80px) !important;*/
+  padding-top: 80px !important;
+} 
 
 
 

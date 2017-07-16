@@ -33,7 +33,6 @@
 .content{
 	overflow: auto;
 	height: 100%;
-	padding-top: 80px;
 }
 
 .menu-list{
@@ -43,3 +42,4 @@
 	.menu-list a{
 		
 	}
+
