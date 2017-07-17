@@ -9,12 +9,12 @@ import { MdButtonModule,
          MdSidenavModule, 
          MdListModule, 
          MdDatepickerModule,
-         MdNativeDateModule } from '@angular/material';
+         MdNativeDateModule, 
+         MdTabsModule } from '@angular/material';
          
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PanelComponent } from './panel/panel.component';
-import { DateformatService } from './services/dateformat.service';
 import { RecordsService } from './records.service';
 import { EllipsisPipe } from './ellipsis.pipe';
 import { RenderComponent } from './render/render.component';
@@ -27,6 +27,10 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
 import { OrderModule } from 'ngx-order-pipe';
 import { ArticlesListComponent } from './articles-list/articles-list.component';
 import { ArticleDetailsComponent } from './article-details/article-details.component';
+import { EventsComponent } from './events/events.component';
+
+import { DateformatService } from './services/dateformat.service';
+import { EventsService } from './services/events.service';
 
 @NgModule({
   declarations: [
@@ -41,8 +45,10 @@ import { ArticleDetailsComponent } from './article-details/article-details.compo
     RecordDetailsComponent,
     ArticlesListComponent,
     ArticleDetailsComponent,
+    EventsComponent,
   ],
   imports: [
+    MdTabsModule,
     OrderModule,
     Ng2OrderModule,
     MdNativeDateModule,
@@ -59,6 +65,7 @@ import { ArticleDetailsComponent } from './article-details/article-details.compo
     AppRoutingModule
   ],
   providers: [
+    EventsService,
     RecordsService,  
     DateformatService
   ],

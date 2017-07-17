@@ -1,0 +1,23 @@
+<div class="container-fluid events-outer">
+	<div class="row">
+		<div class="col-xs-12 events">
+			<md-tab-group md-stretch-tabs="yes">
+			  <md-tab label="{{ date.fields.title }}" *ngFor="let date of dates;">
+			  	<div class="events">
+				  	<div class="event" *ngFor="let event of events">
+				  		<div class="row" *ngIf="event.fields.date == date.pk">
+				  			<div class="col-xs-12 event-inner">
+				  				<div class="day" [innerHTML]="event.fields.day"></div>
+				  				<div class="text">
+					  				<div class="title" [innerHTML]="event.fields.title"></div>
+					  				<div class="teaser" [innerHTML]="event.fields.text | ellipsis:100"></div>				  				
+				  				</div>
+				  			</div>
+				  		</div>				  		
+				  	</div>
+			  	</div>
+			  </md-tab>
+			</md-tab-group>
+		</div>
+	</div>	          
+</div>

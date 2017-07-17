@@ -1,0 +1,34 @@
+.event-inner{
+	padding-bottom: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+	.day{
+		width: 100px;
+	}
+
+	.text{
+		width: calc(100% - 100px);
+	}
+
+		.title{
+			font-weight: bold;
+		}
+
+		.teaser{
+
+		}
+
+/* iphone6Plus */
+@media screen and (max-width: 415px) {
+	.day{
+		width: 100%;
+	}
+
+	.text{
+		width: 100%;
+	}
+}		

@@ -81,7 +81,13 @@ md-sidenav-container{
   padding-top: 80px !important;
 } 
 
+.events-outer .mat-tab-body-content{
+  overflow: visible !important;
+}
 
+.events-outer .mat-tab-body-content{
+  padding-top: 20px;
+}
 
 
 
