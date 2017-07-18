@@ -22,14 +22,6 @@
 		margin: 0;
 	}	
 
-		.variable-title:before{
-			content: ': ';
-		}
-
-		.variable-title{
-			margin-left: -8px;
-		}
-
 .content{
 	overflow: auto;
 	height: 100%;

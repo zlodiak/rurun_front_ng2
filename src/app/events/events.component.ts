@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EventsService } from '../services/events.service';
+import { HeaderService } from '../services/header.service';
 
 
 @Component({
@@ -15,11 +16,12 @@ export class EventsComponent implements OnInit {
 	private minTab: number = 0;
 	private maxTab: number;
 
-  constructor(private eventsService: EventsService) { }
+  constructor(private eventsService: EventsService, private headerService: HeaderService) { }
 
   ngOnInit() {
  		this.fillEvents();
  		this.fillDates();
+    this.headerService.setTitle('События');
   }
 
   private fillEvents(): void {

@@ -57,7 +57,7 @@ export class FilterComponent implements OnInit {
         }, 
         err => {
           console.log('err')
-          this.onErrorFilter.emit('Некорректный период даты');          
+          this.onErrorFilter.emit();          
         });
   }
 

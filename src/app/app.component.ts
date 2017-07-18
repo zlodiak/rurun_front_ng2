@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HeaderService } from './services/header.service';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   private headerTitle: string;
 
+  constructor(private headerService: HeaderService) { }
+
   private handlerClickMenu(sidenav: any, headerTitle: string) {
-  	this.headerTitle = headerTitle;
 		sidenav.close();
   };
 }

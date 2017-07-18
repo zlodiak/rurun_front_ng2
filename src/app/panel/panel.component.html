@@ -1,5 +1,5 @@
 <div class="action-area container-fluid" *ngIf="!showDetailsPage">
-	<app-filter (onSubmitFilter)="setRenderData($event)" (onErrorFilter)="showErrorMessage($event)"></app-filter>
+	<app-filter (onSubmitFilter)="setRenderData($event)" (onErrorFilter)="showErrorMessage()"></app-filter>
 </div>
 
 <div class="statistic-area container-fluid" *ngIf="!showDetailsPage && records">
@@ -14,4 +14,5 @@
 											(onClickBackBtn)="setVisibilityDetailsPage(false)">
 	</app-record-details>
 </div>
-
+ 
+<popup #popupErrorDates>Некорректный период даты</popup>

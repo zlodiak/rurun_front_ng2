@@ -3,10 +3,7 @@
 	  <button class="menu-icon" type="button" md-button (click)="sidenav.open()">
 	    <div class="material-icons md-48 basic-color">menu</div>
 	  </button>
-	  <h1 class="title">
-	  	<span>RuRun</span>
-	  	<span class="variable-title" [innerHTML]="headerTitle" *ngIf="headerTitle"></span>
-	  </h1>
+	  <h1 class="title" [innerHTML]="headerService.getTitle()"></h1>
 	</div>
 
   <md-sidenav #sidenav mode="over">

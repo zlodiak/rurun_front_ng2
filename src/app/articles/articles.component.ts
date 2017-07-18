@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
  
 import { ArticlesListComponent } from '../articles-list/articles-list.component';
+import { HeaderService } from '../services/header.service';
 
 
 @Component({
@@ -13,10 +14,10 @@ export class ArticlesComponent implements OnInit {
   private showArticleDetails: Boolean = false;
   private articleObj: Object;
 
-  constructor() { }
+  constructor(private headerService: HeaderService) { }
 
   ngOnInit() {
-
+    this.headerService.setTitle('Заметки');
   }
 
   private setVisibilityDetailsPage(val):void {
