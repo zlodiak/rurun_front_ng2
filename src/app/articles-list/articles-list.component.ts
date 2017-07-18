@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { ScrollService } from '../services/scroll.service';
 
 @Component({
   selector: 'app-articles-list',
@@ -13,7 +14,7 @@ export class ArticlesListComponent implements OnInit {
 
   @Output() onClickArticleTeaser = new EventEmitter<Object>();
 
-  constructor(private http: Http) { }
+  constructor(private http: Http, private scrollService: ScrollService) { }
 
   ngOnInit() {
     this.http.get('http://127.0.0.1:8000/articles')
@@ -27,10 +28,8 @@ export class ArticlesListComponent implements OnInit {
   }
 
   private openArticleDetails(articleObj): void {
-    let teasersScrollTop = this.getScrollTop('content');
-
-  	//console.log(articleObj, teasersScrollTop);
-
+    let teasersScrollTop = this.scrollService.findScrollTop('content');
+    this.scrollService.setScrollTop(teasersScrollTop);
   	this.onClickArticleTeaser.emit(articleObj);
   }  
 
@@ -48,15 +47,6 @@ export class ArticlesListComponent implements OnInit {
     }
 
     return dataObj;
-  };
-
-  private getScrollTop(id): Number {
-    let el = document.getElementById(id);
-    let scrollTop = el.scrollTop;
-
-    //console.log(id, '--', el, '--', scrollTop);
-
-    return scrollTop;
   };
 
 }

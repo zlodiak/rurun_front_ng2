@@ -1,5 +1,8 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 
+import { ScrollService } from '../services/scroll.service';
+
+
 @Component({
   selector: 'app-article-details',
   templateUrl: './article-details.component.html',
@@ -8,21 +11,17 @@ import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 export class ArticleDetailsComponent implements OnInit {
 
   @Input() articleObj: Object;
-  @Output() onClickBackBtn = new EventEmitter<Boolean>();  
+  @Output() onClickBackBtn = new EventEmitter<number>();  
 
-  constructor() { }
+  constructor(private scrollService: ScrollService) { }
 
   ngOnInit() {
-    this.scrollToTop();
+    this.scrollService.moveScrollTop('content', 0);
   }
 
   private back(): void {
-  	this.onClickBackBtn.emit();
-  };
-
-  private scrollToTop(): void {
-    let el = document.getElementById('content');
-    el.scrollTop = 0;
+    let scrollTop = this.scrollService.getScrollTop();
+  	this.onClickBackBtn.emit(scrollTop);
   };
 
 }

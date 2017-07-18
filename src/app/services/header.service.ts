@@ -7,11 +7,11 @@ export class HeaderService {
 
   constructor() { }
 
-	getTitle(): string {
+	public getTitle(): string {
 		return this.title
 	};  
 
-	setTitle(title): void {
+	public setTitle(title): void {
 		this.title = title;
 	};  	 
 

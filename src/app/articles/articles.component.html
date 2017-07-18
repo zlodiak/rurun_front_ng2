@@ -3,5 +3,5 @@
 										id="articlesList"></app-articles-list>
 
 <app-article-details 	*ngIf="showArticleDetails" 
-											(onClickBackBtn)="setVisibilityDetailsPage(false)" 
+											(onClickBackBtn)="handlerClickBackBtn($event)" 
 											[articleObj]="articleObj"></app-article-details>

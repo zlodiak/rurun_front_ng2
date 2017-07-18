@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
-import { RecordsService } from '../records.service';
+import { RecordsService } from '../services/records.service';
 
 
 @Component({

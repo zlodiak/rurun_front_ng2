@@ -29,9 +29,10 @@ import { EventsComponent } from './events/events.component';
 import { DateformatService } from './services/dateformat.service';
 import { EventsService } from './services/events.service';
 import { HeaderService } from './services/header.service';
-import { RecordsService } from './records.service';
+import { RecordsService } from './services/records.service';
+import { ScrollService } from './services/scroll.service';
 
-import { EllipsisPipe } from './ellipsis.pipe';
+import { EllipsisPipe } from './pipes/ellipsis.pipe';
 
 import 'hammerjs';
 import 'hammer-timejs';
@@ -74,6 +75,7 @@ import { PopupModule } from 'ng2-opd-popup';
     AppRoutingModule
   ],
   providers: [
+    ScrollService,
     HeaderService,
     EventsService,
     RecordsService,  
