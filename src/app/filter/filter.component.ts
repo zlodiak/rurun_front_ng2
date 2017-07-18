@@ -39,6 +39,7 @@ export class FilterComponent implements OnInit {
   };   
 
   @Output() onSubmitFilter = new EventEmitter<Object>();
+  @Output() onErrorFilter = new EventEmitter<string>();
 
   private submitFilter() {
     let modelDateBeginUnix = Date.parse(this.modelDateBegin)/1000;
@@ -53,6 +54,10 @@ export class FilterComponent implements OnInit {
           	records: this.records,
           	limits: this.limits
           });
+        }, 
+        err => {
+          console.log('err')
+          this.onErrorFilter.emit('Некорректный период даты');          
         });
   }
 

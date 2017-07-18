@@ -1,10 +1,10 @@
-<div class="container-fluid events-outer">
+<div class="container-fluid events-outer" (swipeleft)="onSwipeLeft($event)" (swiperight)="onSwipeRight($event)">
 	<div class="row">
 		<div class="col-xs-12 events">
-			<md-tab-group md-stretch-tabs="yes">
-			  <md-tab label="{{ date.fields.title }}" *ngFor="let date of dates;">
-			  	<div class="events">
-				  	<div class="event" *ngFor="let event of events">
+			<md-tab-group [selectedIndex]="selectedTab" md-stretch-tabs="yes">
+			  <md-tab label="{{ date.fields.title }}" *ngFor="let date of dates | orderBy:'order'" >
+			  	<div class="events" >
+				  	<div class="event" *ngFor="let event of events | orderBy:'fields.order':true">
 				  		<div class="row" *ngIf="event.fields.date == date.pk">
 				  			<div class="col-xs-12 event-inner">
 				  				<div class="day" [innerHTML]="event.fields.day"></div>

@@ -1,5 +1,5 @@
 <div class="action-area container-fluid" *ngIf="!showDetailsPage">
-	<app-filter (onSubmitFilter)="setRenderData($event)"></app-filter>
+	<app-filter (onSubmitFilter)="setRenderData($event)" (onErrorFilter)="showErrorMessage($event)"></app-filter>
 </div>
 
 <div class="statistic-area container-fluid" *ngIf="!showDetailsPage && records">

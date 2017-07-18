@@ -18,19 +18,23 @@ export class PanelComponent implements OnInit {
   private records: Object;  
   private limits: Object;  
 
-  setVisibilityDetailsPage(visibility) {
+  private setVisibilityDetailsPage(visibility) {
     console.log(visibility);
     this.showDetailsPage = visibility;
   };
 
-  setDetailsPage(obj) {
+  private setDetailsPage(obj) {
     this.setVisibilityDetailsPage(obj.visibility);
     this.detailsPageRecord = obj.record;
   };
 
-  setRenderData(obj) {
+  private setRenderData(obj) {   
     this.records = obj.records;
     this.limits = obj.limits;
   }
+
+  private showErrorMessage(message): void {
+    alert(message);
+  };
 
 }

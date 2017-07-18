@@ -16,7 +16,7 @@ export class EventsService {
 
 	getDates(): Observable<any> {
 		let result = this.http.get('http://127.0.0.1:8000/event/dates');
-		console.log('result', result);
+		//console.log('result', result);
 		return result;
 	} 	
 

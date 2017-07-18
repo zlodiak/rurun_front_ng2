@@ -10,7 +10,8 @@ import { MdButtonModule,
          MdListModule, 
          MdDatepickerModule,
          MdNativeDateModule, 
-         MdTabsModule } from '@angular/material';
+         MdTabsModule, 
+         MdDialogModule } from '@angular/material';
          
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,6 +33,9 @@ import { EventsComponent } from './events/events.component';
 import { DateformatService } from './services/dateformat.service';
 import { EventsService } from './services/events.service';
 
+import 'hammerjs';
+import 'hammer-timejs';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +52,7 @@ import { EventsService } from './services/events.service';
     EventsComponent,
   ],
   imports: [
+    MdDialogModule,
     MdTabsModule,
     OrderModule,
     Ng2OrderModule,

@@ -11,6 +11,9 @@ export class EventsComponent implements OnInit {
 
 	private events: Object;
 	private dates: Object;
+	private selectedTab: number = 0;
+	private minTab: number = 0;
+	private maxTab: number;
 
   constructor(private eventsService: EventsService) { }
 
@@ -24,7 +27,7 @@ export class EventsComponent implements OnInit {
         .getEvents()
         .subscribe(data => {
           this.events = JSON.parse(data.json());
-          console.log(this.events);
+          //console.log(this.events);
         });   	
   };
 
@@ -33,8 +36,21 @@ export class EventsComponent implements OnInit {
         .getDates()
         .subscribe(data => {
           this.dates = JSON.parse(data.json());
-          //console.log(this.dates);
+          this.maxTab = Object.keys( this.dates ).length - 1;
+          //console.log(this.dates );
         }); 
   };
+
+  private onSwipeLeft(event: any) {
+  	if(this.selectedTab > this.minTab) {
+  		this.selectedTab--;
+  	}
+  }
+
+  private onSwipeRight(event: any) {
+  	if(this.selectedTab < this.maxTab) {
+  		this.selectedTab++;
+  	}  	
+  }  
 
 }
