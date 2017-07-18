@@ -32,6 +32,9 @@
 }
 
 	.menu-list a{
-		
+		border: none;
+		outline: none;
+		text-decoration: none;
+		color: rgba(0,0,0,.87);
 	}
 

@@ -43,13 +43,13 @@ export class EventsComponent implements OnInit {
         }); 
   };
 
-  private onSwipeLeft(event: any) {
+  private onSwipeRight(event: any) {
   	if(this.selectedTab > this.minTab) {
   		this.selectedTab--;
   	}
   }
 
-  private onSwipeRight(event: any) {
+  private onSwipeLeft(event: any) {
   	if(this.selectedTab < this.maxTab) {
   		this.selectedTab++;
   	}  	
