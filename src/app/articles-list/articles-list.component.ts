@@ -1,7 +1,10 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+
 import { ScrollService } from '../services/scroll.service';
+import { ArticlesService } from '../services/articles.service';
+
 
 @Component({
   selector: 'app-articles-list',
@@ -14,17 +17,12 @@ export class ArticlesListComponent implements OnInit {
 
   @Output() onClickArticleTeaser = new EventEmitter<Object>();
 
-  constructor(private http: Http, private scrollService: ScrollService) { }
+  constructor(private http: Http, 
+              private scrollService: ScrollService, 
+              private articlesService: ArticlesService) { }
 
   ngOnInit() {
-    this.http.get('http://127.0.0.1:8000/articles')
-        .map((response: Response) => JSON.parse(response.json()))
-        .subscribe(data => {
-        		//console.log(data);
-            let changedDataObj = this.addUnixDatePropToObj(data);
-            //console.log(changedDataObj);
-            this.articles = data;
-        });  	
+    this.getArticles();
   }
 
   private openArticleDetails(articleObj): void {
@@ -47,6 +45,20 @@ export class ArticlesListComponent implements OnInit {
     }
 
     return dataObj;
+  };
+
+  private getArticles(): void {
+    this.articlesService
+        .getArticles()
+        .map((response: Response) => JSON.parse(response.json()))
+        .subscribe(data => {
+                      let changedDataObj = this.addUnixDatePropToObj(data);
+                      //console.log(changedDataObj);
+                      this.articles = data;
+                  }, 
+                  err => {
+                    //console.log('err')         
+                  });    
   };
 
 }

@@ -17,7 +17,7 @@ export class RenderComponent implements OnInit {
   @Output() onShowDetailsPage = new EventEmitter<Object>();
 
   showDetails(record) {
-  	console.log('show details', record);
+  	//console.log('show details', record);
   	this.onShowDetailsPage.emit({
       visibility: true,
       record: record

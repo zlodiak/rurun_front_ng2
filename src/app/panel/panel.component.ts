@@ -11,7 +11,8 @@ import { HeaderService } from '../services/header.service';
 })
 export class PanelComponent implements OnInit {
 
-  constructor(private popup:Popup, private headerService: HeaderService) { }
+  constructor(private popup:Popup, 
+              private headerService: HeaderService) { }
 
   ngOnInit() {
     this.headerService.setTitle('Статистика');
@@ -25,7 +26,7 @@ export class PanelComponent implements OnInit {
   @ViewChild('popupErrorDates') popupErrorDates: Popup;  
 
   private setVisibilityDetailsPage(visibility) {
-    console.log(visibility);
+    //console.log(visibility);
     this.showDetailsPage = visibility;
   };
 
@@ -40,7 +41,6 @@ export class PanelComponent implements OnInit {
   }
 
   private showErrorMessage(message): void {
-    //alert(message);
     this.popupErrorDates.show({
         header: "Ошибка!",
         color: "#f00", // red, blue.... 

@@ -15,7 +15,8 @@ export class ArticlesComponent implements OnInit {
   private showArticleDetails: Boolean = false;
   private articleObj: Object;
 
-  constructor(private headerService: HeaderService, private scrollService: ScrollService) { }
+  constructor(private headerService: HeaderService, 
+              private scrollService: ScrollService) { }
 
   ngOnInit() {
     this.headerService.setTitle('Заметки');

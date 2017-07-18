@@ -42,23 +42,9 @@ export class FilterComponent implements OnInit {
   @Output() onErrorFilter = new EventEmitter<string>();
 
   private submitFilter() {
-    let modelDateBeginUnix = Date.parse(this.modelDateBegin)/1000;
-    let modelDateEndUnix = Date.parse(this.modelDateEnd)/1000;   
-
-    this.recordsService
-        .getRecords(modelDateBeginUnix, modelDateEndUnix)
-        .subscribe(data => {
-          this.records = JSON.parse(data.json());
-
-          this.onSubmitFilter.emit({
-          	records: this.records,
-          	limits: this.limits
-          });
-        }, 
-        err => {
-          console.log('err')
-          this.onErrorFilter.emit();          
-        });
+    let modelDateBeginUnix = Date.parse(this.modelDateBegin)/1000, 
+        modelDateEndUnix = Date.parse(this.modelDateEnd)/1000;   
+    this.getRecords(modelDateBeginUnix, modelDateEndUnix);
   }
 
   private toggleSlideVisibility(index) {
@@ -68,5 +54,22 @@ export class FilterComponent implements OnInit {
   private stopPropagator(ev) {
     ev.stopPropagation();
   };    
+
+  private getRecords(modelDateBeginUnix, modelDateEndUnix): void {
+    this.recordsService
+        .getRecords(modelDateBeginUnix, modelDateEndUnix)
+        .subscribe(data => {
+                      this.records = JSON.parse(data.json());
+
+                      this.onSubmitFilter.emit({
+                        records: this.records,
+                        limits: this.limits
+                      });
+                    }, 
+                    err => {
+                      //console.log('err')
+                      this.onErrorFilter.emit();          
+                    });    
+  };
 
 }

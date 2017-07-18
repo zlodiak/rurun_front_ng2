@@ -16,7 +16,8 @@ export class EventsComponent implements OnInit {
 	private minTab: number = 0;
 	private maxTab: number;
 
-  constructor(private eventsService: EventsService, private headerService: HeaderService) { }
+  constructor(private eventsService: EventsService, 
+              private headerService: HeaderService) { }
 
   ngOnInit() {
  		this.fillEvents();

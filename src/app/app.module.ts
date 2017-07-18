@@ -30,6 +30,7 @@ import { DateformatService } from './services/dateformat.service';
 import { EventsService } from './services/events.service';
 import { HeaderService } from './services/header.service';
 import { RecordsService } from './services/records.service';
+import { ArticlesService } from './services/articles.service';
 import { ScrollService } from './services/scroll.service';
 
 import { EllipsisPipe } from './pipes/ellipsis.pipe';
@@ -75,6 +76,7 @@ import { PopupModule } from 'ng2-opd-popup';
     AppRoutingModule
   ],
   providers: [
+    ArticlesService,
     ScrollService,
     HeaderService,
     EventsService,
