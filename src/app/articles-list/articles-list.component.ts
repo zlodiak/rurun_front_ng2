@@ -1,6 +1,5 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
+import { Component, OnInit, EventEmitter, Output, HostListener } from '@angular/core';
+import { Response } from '@angular/http';
 
 import { ScrollService } from '../services/scroll.service';
 import { ArticlesService } from '../services/articles.service';
@@ -15,16 +14,28 @@ export class ArticlesListComponent implements OnInit {
 
   private articles: any[];
 	private filterText: string;
+  private scrollTopPosition: number = 0;
 
   @Output() onClickArticleTeaser = new EventEmitter<Object>();
 
-  constructor(private http: Http, 
-              private scrollService: ScrollService, 
-              private articlesService: ArticlesService) { }
+  constructor(private scrollService: ScrollService, 
+              private articlesService: ArticlesService) 
+  { 
+    this.setEventListenerForContent();
+  }
 
   ngOnInit() {
     this.getArticles();
   }
+
+  private setEventListenerForContent(): void {
+    let el = document.getElementById('content'), 
+        that = this;   
+
+    el.addEventListener('scroll', function() {
+      that.scrollTopPosition = el.scrollTop;
+    });    
+  };
 
   private openArticleDetails(articleObj): void {
     let teasersScrollTop = this.scrollService.findScrollTop('content');

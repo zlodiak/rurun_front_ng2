@@ -34,13 +34,16 @@ import { ArticlesService } from './services/articles.service';
 import { ScrollService } from './services/scroll.service';
 
 import { EllipsisPipe } from './pipes/ellipsis.pipe';
+import { ArticlesFilterPipe } from './pipes/articles-filter.pipe';
+
+import { ScrollArrowDirective } from './directives/scroll-arrow.directive';
 
 import 'hammerjs';
 import 'hammer-timejs';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import { OrderModule } from 'ngx-order-pipe';
 import { PopupModule } from 'ng2-opd-popup';
-import { ArticlesFilterPipe } from './pipes/articles-filter.pipe';
+
 
 @NgModule({
   declarations: [
@@ -57,6 +60,7 @@ import { ArticlesFilterPipe } from './pipes/articles-filter.pipe';
     ArticleDetailsComponent,
     EventsComponent,
     ArticlesFilterPipe,
+    ScrollArrowDirective,
   ],
   imports: [
     PopupModule.forRoot(),
