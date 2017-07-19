@@ -40,6 +40,7 @@ import 'hammer-timejs';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import { OrderModule } from 'ngx-order-pipe';
 import { PopupModule } from 'ng2-opd-popup';
+import { ArticlesFilterPipe } from './pipes/articles-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { PopupModule } from 'ng2-opd-popup';
     ArticlesListComponent,
     ArticleDetailsComponent,
     EventsComponent,
+    ArticlesFilterPipe,
   ],
   imports: [
     PopupModule.forRoot(),

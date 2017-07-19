@@ -35,7 +35,7 @@ export class ArticlesListComponent implements OnInit {
     let unixTimeStamp: Number;
     let changedObj: Object;
 
-    for(var prop in dataObj) {
+    for(let prop in dataObj) {
       if (!dataObj.hasOwnProperty(prop)) continue;
 
       unixTimeStamp = parseInt((new Date(dataObj[prop].fields.created_date).getTime() / 1000).toFixed(0));
