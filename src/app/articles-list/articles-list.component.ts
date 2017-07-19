@@ -13,7 +13,8 @@ import { ArticlesService } from '../services/articles.service';
 })
 export class ArticlesListComponent implements OnInit {
 
-	private articles: any[];
+  private articles: any[];
+	private filterText: string;
 
   @Output() onClickArticleTeaser = new EventEmitter<Object>();
 

@@ -5,19 +5,17 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ArticlesFilterPipe implements PipeTransform {
 
-  transform(articles: Object, searchText: string): Object {
+  transform(articles: Object, filterText: string): Object {
   	let filteredArticles: Object[] = [];
 
-    if (searchText === undefined) {
+    if (!filterText || filterText.length <= 3) {
       return articles;
     }  	
-
-    console.log(searchText)
 
     for(let prop in articles) {
       if (!articles.hasOwnProperty(prop)) continue;
 
-      if(articles[prop].fields.title.toLowerCase().indexOf(searchText.toLowerCase()) != -1) {
+      if(articles[prop].fields.title.toLowerCase().indexOf(filterText.toLowerCase()) != -1) {
       	filteredArticles.push(articles[prop]);
       };
     }

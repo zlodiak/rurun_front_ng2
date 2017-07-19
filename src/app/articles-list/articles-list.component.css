@@ -1,4 +1,4 @@
-.search-outer{
+.filter-outer{
 	position: fixed;
 	top: 68px;
 	left: 0;
@@ -12,10 +12,12 @@
 	align-items: center;	
 }
 
-	.search{
+	.filter{
 		padding: 0 4px;
 		width: 100%;
 		display: block;
+		outline: #ccc;
+		border: 1px solid #ccc;
 	}
 
 .teasers{

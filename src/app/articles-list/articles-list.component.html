@@ -1,11 +1,11 @@
-<div class="search-outer">
-	<input class="search" type="text" id="search" placeholder="Текст для поиска">
+<div class="filter-outer">
+	<input class="filter" type="text" id="filter" placeholder="Текст для поиска" [(ngModel)]="filterText">
 </div>
 
 <div class="container-fluid" id="articlesContainer">
 	<div class="row teasers" id="teasers">
 		<div 	class="teaser col-md-6" 
-					*ngFor="let article of articles | articlesFilter:'Морская свинка':'df' | orderBy:'create_date_unix':true; let i = index" 
+					*ngFor="let article of articles | articlesFilter:filterText | orderBy:'create_date_unix':true; let i = index" 
 					(click)="openArticleDetails(articles[i])">
 					
 			<h3 class="title" [innerHTML]="article.fields.title"></h3>	
