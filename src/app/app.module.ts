@@ -35,6 +35,7 @@ import { HeaderService } from './services/header.service';
 import { RecordsService } from './services/records.service';
 import { ArticlesService } from './services/articles.service';
 import { ScrollService } from './services/scroll.service';
+import { GuestbookService } from './services/guestbook.service';
 
 import { EllipsisPipe } from './pipes/ellipsis.pipe';
 import { ArticlesFilterPipe } from './pipes/articles-filter.pipe';
@@ -88,6 +89,7 @@ import { PopupModule } from 'ng2-opd-popup';
     AppRoutingModule
   ],
   providers: [
+    GuestbookService,
     ArticlesService,
     ScrollService,
     HeaderService,
