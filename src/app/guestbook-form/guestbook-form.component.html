@@ -1,0 +1,20 @@
+<div class="form">
+	<form class="guestbook-form" novalidate (ngSubmit)="onSubmit(guestbookForm)">
+		<md-input-container class="line">
+			<input class="input name" id="name" type="text" placeholder="Имя" mdInput>		
+		</md-input-container>
+
+		<md-input-container class="line">
+			<input class="input email" id="email" type="email" placeholder="Email" mdInput>		
+		</md-input-container>
+
+		<md-input-container class="line">
+			<textarea class="input message" id="message" placeholder="Текст сообщения" maxlength="100" #messageEl mdInput></textarea>
+			<md-hint align="end">{{messageEl.value.length}} / 100</md-hint>
+		</md-input-container>		
+
+		<div class="line">
+			<button md-button class="btn btn-submit basic-bg-color" (click)="submit()">Отправить</button>		
+		</div>				
+	</form>
+</div>

@@ -25,6 +25,9 @@ import { RecordDetailsComponent } from './record-details/record-details.componen
 import { ArticlesListComponent } from './articles-list/articles-list.component';
 import { ArticleDetailsComponent } from './article-details/article-details.component';
 import { EventsComponent } from './events/events.component';
+import { GuestbookComponent } from './guestbook/guestbook.component';
+import { GuestbookFormComponent } from './guestbook-form/guestbook-form.component';
+import { GuestbookListComponent } from './guestbook-list/guestbook-list.component';
 
 import { DateformatService } from './services/dateformat.service';
 import { EventsService } from './services/events.service';
@@ -61,6 +64,9 @@ import { PopupModule } from 'ng2-opd-popup';
     EventsComponent,
     ArticlesFilterPipe,
     ScrollArrowDirective,
+    GuestbookComponent,
+    GuestbookFormComponent,
+    GuestbookListComponent,
   ],
   imports: [
     PopupModule.forRoot(),

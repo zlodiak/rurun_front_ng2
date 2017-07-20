@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { PanelComponent } from './panel/panel.component';
 import { EventsComponent } from './events/events.component';
+import { GuestbookComponent } from './guestbook/guestbook.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
@@ -33,6 +34,11 @@ const routes: Routes = [
     children: [],
     component: EventsComponent
   },  
+  {
+    path: 'guestbook',
+    children: [],
+    component: GuestbookComponent
+  },    
   { 
     path: '**', 
     children: [],
