@@ -1,11 +1,7 @@
 <div class="form">
-	<form class="guestbook-form" #guestbookForm novalidate (ngSubmit)="onSubmit(guestbookForm)">
+	<div class="guestbook-form">
 		<md-input-container class="line">
 			<input class="input name" id="name" type="text" placeholder="Имя" [(ngModel)]="name" mdInput required>		
-		</md-input-container>
-
-		<md-input-container class="line">
-			<input class="input email" id="email" type="email" placeholder="Email" [(ngModel)]="email" mdInput required>		
 		</md-input-container>
 
 		<md-input-container class="line">
@@ -14,7 +10,7 @@
 		</md-input-container>		
 
 		<div class="line">
-			<button md-button class="btn btn-submit basic-bg-color" (click)="submit()" [disabled]="guestbookForm.invalid">Отправить</button>		
+			<button md-button class="btn btn-submit basic-bg-color" (click)="submit()" [disabled]="isDisabled()">Отправить</button>		
 		</div>				
-	</form>
+	</div>
 </div>

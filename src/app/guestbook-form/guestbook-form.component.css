@@ -21,6 +21,10 @@
 				width: 100%;
 			}
 
+			.btn-submit:disabled{
+				background: #ccc;
+			}
+
 			.btn-submit{
-				color: #fff;
+				color: #fff !important;
 			}

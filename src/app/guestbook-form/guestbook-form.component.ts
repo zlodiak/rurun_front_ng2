@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm} from '@angular/forms';
 
 
 @Component({
@@ -9,6 +8,9 @@ import { NgForm} from '@angular/forms';
 })
 export class GuestbookFormComponent implements OnInit {
 
+	private name: string = '';
+	private message: string = '';
+
   constructor() { }
 
   ngOnInit() {
@@ -16,6 +18,16 @@ export class GuestbookFormComponent implements OnInit {
 
   private submit(): void {
 
+  };
+
+  private isDisabled(): Boolean {
+  	let result = false;
+
+  	if(!this.name || !this.message) {
+  		result = true;
+  	};
+
+  	return result;
   };
 
 }
