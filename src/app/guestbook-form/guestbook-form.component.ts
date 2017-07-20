@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm} from '@angular/forms';
+
 
 @Component({
   selector: 'app-guestbook-form',
@@ -11,5 +13,9 @@ export class GuestbookFormComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  private submit(): void {
+
+  };
 
 }

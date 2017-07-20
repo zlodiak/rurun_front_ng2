@@ -1,20 +1,20 @@
 <div class="form">
-	<form class="guestbook-form" novalidate (ngSubmit)="onSubmit(guestbookForm)">
+	<form class="guestbook-form" #guestbookForm novalidate (ngSubmit)="onSubmit(guestbookForm)">
 		<md-input-container class="line">
-			<input class="input name" id="name" type="text" placeholder="Имя" mdInput>		
+			<input class="input name" id="name" type="text" placeholder="Имя" [(ngModel)]="name" mdInput required>		
 		</md-input-container>
 
 		<md-input-container class="line">
-			<input class="input email" id="email" type="email" placeholder="Email" mdInput>		
+			<input class="input email" id="email" type="email" placeholder="Email" [(ngModel)]="email" mdInput required>		
 		</md-input-container>
 
 		<md-input-container class="line">
-			<textarea class="input message" id="message" placeholder="Текст сообщения" maxlength="100" #messageEl mdInput></textarea>
+			<textarea class="input message" id="message" placeholder="Текст сообщения" maxlength="100" [(ngModel)]="message" #messageEl mdInput required></textarea>
 			<md-hint align="end">{{messageEl.value.length}} / 100</md-hint>
 		</md-input-container>		
 
 		<div class="line">
-			<button md-button class="btn btn-submit basic-bg-color" (click)="submit()">Отправить</button>		
+			<button md-button class="btn btn-submit basic-bg-color" (click)="submit()" [disabled]="guestbookForm.invalid">Отправить</button>		
 		</div>				
 	</form>
 </div>
