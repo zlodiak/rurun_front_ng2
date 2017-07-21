@@ -20,4 +20,9 @@ export class GuestbookService {
 		return this.http.post(config.host + 'guestbook/message_create', params.toString(), { headers: headers });
   };
 
+  getMessages(): Observable<any> {
+  	let result = this.http.get(config.host + 'guestbook/messages_index');
+  	return result;
+  }   
+
 }

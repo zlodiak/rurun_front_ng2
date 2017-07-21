@@ -1,7 +1,7 @@
 <div class="form">
 	<div class="guestbook-form">
 		<md-input-container class="line">
-			<input class="input name" id="name" type="text" placeholder="Имя" maxlength="60" [(ngModel)]="name" mdInput required>		
+			<input class="input name" id="name" type="text" placeholder="Имя" maxlength="60" [(ngModel)]="name" #nameEl mdInput required><md-hint align="end">{{nameEl.value.length}} / 60</md-hint>
 		</md-input-container>
 
 		<md-input-container class="line">

@@ -1,5 +1,36 @@
 .list{
 	height: 60%;
-	background: yellow;
 	overflow-y: auto;
 }
+
+	.message{
+		background: #ddd;
+		margin: 0 auto 10px;
+		width: 100%;	
+	}
+
+		.head{
+
+		}
+
+			.name{
+				display: inline-block;
+				font-weight: bold;
+			}
+
+			.date:before{
+				content: '(';
+			}
+
+			.date:after{
+				content: ')';
+			}			
+
+			.date{
+				display: inline-block;
+				font-size: 70%;
+			}
+
+		.text{
+
+		}

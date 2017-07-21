@@ -43,7 +43,7 @@ export class ArticlesListComponent implements OnInit {
   	this.onClickArticleTeaser.emit(articleObj);
   }  
 
-  private addUnixDatePropToObj(dataObj): Object {
+  private addUnixDatePropToObj(dataObj): void {
     let unixTimeStamp: Number;
     let changedObj: Object;
 
@@ -55,8 +55,6 @@ export class ArticlesListComponent implements OnInit {
 
       dataObj[prop].create_date_unix = unixTimeStamp;
     }
-
-    return dataObj;
   };
 
   private getArticles(): void {
@@ -64,7 +62,7 @@ export class ArticlesListComponent implements OnInit {
         .getArticles()
         .map((response: Response) => JSON.parse(response.json()))
         .subscribe(data => {
-                      let changedDataObj = this.addUnixDatePropToObj(data);
+                      this.addUnixDatePropToObj(data);
                       //console.log(changedDataObj);
                       this.articles = data;
                   }, 

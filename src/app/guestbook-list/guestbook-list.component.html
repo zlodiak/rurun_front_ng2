@@ -1,69 +1,12 @@
 <div class="list">
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-	l <br>
-</div>
+	<md-card class="message" *ngFor="let article of articles | orderBy:'create_date_unix':true">
+	  <div class="header">
+	    <div class="name" [innerHTML]="article.fields.name"></div>
+	    <div class="date">
+				<span class="date_">{{ article.fields.created_date.split('T')[0] }}</span>
+				<span class="time_">{{ article.fields.created_date.split('T')[1].slice(0, -8) }}</span>
+	    </div>
+	  </div>
+	  <div class="text" [innerHTML]="article.fields.text"></div>
+	</md-card>	
+</div>  

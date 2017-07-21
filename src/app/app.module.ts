@@ -12,7 +12,8 @@ import { MdButtonModule,
          MdDatepickerModule,
          MdNativeDateModule, 
          MdTabsModule, 
-         MdDialogModule } from '@angular/material';         
+         MdDialogModule,
+         MdCardModule } from '@angular/material';         
 
 import { AppComponent } from './app.component';
 import { PanelComponent } from './panel/panel.component';
@@ -70,6 +71,7 @@ import { PopupModule } from 'ng2-opd-popup';
     GuestbookListComponent,
   ],
   imports: [
+    MdCardModule,
     PopupModule.forRoot(),
     MdDialogModule,
     MdTabsModule,
