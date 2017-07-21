@@ -47,7 +47,7 @@ import 'hammerjs';
 import 'hammer-timejs';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import { OrderModule } from 'ngx-order-pipe';
-import { PopupModule } from 'ng2-opd-popup';
+//import { PopupModule } from 'ng2-opd-popup';
 
 
 @NgModule({
@@ -72,7 +72,7 @@ import { PopupModule } from 'ng2-opd-popup';
   ],
   imports: [
     MdCardModule,
-    PopupModule.forRoot(),
+    //PopupModule.forRoot(),
     MdDialogModule,
     MdTabsModule,
     OrderModule,
