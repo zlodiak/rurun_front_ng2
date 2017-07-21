@@ -6,7 +6,7 @@
 	  <h1 class="title" [innerHTML]="headerService.getTitle()"></h1>
 	</div>
 
-  <md-sidenav #sidenav mode="over">
+  <md-sidenav class="md-side-nav" #sidenav mode="over">
 		<md-list class="menu-list">
 		  <md-list-item>
 		  	<a class="basic-color" (click)="handlerClickMenu(sidenav, '')" [routerLink]="['/home']">Начало</a>
@@ -28,6 +28,11 @@
 		  	<a class="basic-color" (click)="handlerClickMenu(sidenav, 'События')" [routerLink]="['/events']">События</a>
 		  </md-list-item>    		    
 		</md-list>		
+
+		<div class="create-block basic-bg-color">
+			<div class="inner copyright">© Sergey Kalinin 2017</div>
+			<div class="inner powered">Powered by: Angular2 / Django</div>
+		</div>
   </md-sidenav>
 
   <div class="content" id="content">
