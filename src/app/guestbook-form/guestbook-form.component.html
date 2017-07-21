@@ -1,12 +1,12 @@
 <div class="form">
 	<div class="guestbook-form">
 		<md-input-container class="line">
-			<input class="input name" id="name" type="text" placeholder="Имя" [(ngModel)]="name" mdInput required>		
+			<input class="input name" id="name" type="text" placeholder="Имя" maxlength="60" [(ngModel)]="name" mdInput required>		
 		</md-input-container>
 
 		<md-input-container class="line">
-			<textarea class="input message" id="message" placeholder="Текст сообщения" maxlength="100" [(ngModel)]="message" #messageEl mdInput required></textarea>
-			<md-hint align="end">{{messageEl.value.length}} / 100</md-hint>
+			<textarea class="input message" id="message" placeholder="Текст сообщения" maxlength="200" [(ngModel)]="message" #messageEl mdInput required></textarea>
+			<md-hint align="end">{{messageEl.value.length}} / 200</md-hint>
 		</md-input-container>		
 
 		<div class="line">
@@ -14,3 +14,7 @@
 		</div>				
 	</div>
 </div>
+
+<popup  #popup_ok>Сообщение отправлено.</popup>
+ 
+<popup  #popup_error>Произошла ошибка. Сообщение не отправлено.</popup>
